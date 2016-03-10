@@ -45,11 +45,11 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('serve', function(){
     browserSync.init({
-        server: "./app",
+        server: "./",
         port: 3030
     });
 
-    gulp.watch("app/**/*").on('change', browserSync.reload);
+    gulp.watch("**/*").on('change', browserSync.reload);
 });
 
 
