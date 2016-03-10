@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+$font-stack: Raleway, sans-serif;
+$primary-color: #6D7382;
+$secondary-color: rgba(30,30,30,0.7);
+$active-text-color: #e1e1e1;
+
+$information-phone: "only screen and (max-width: 600px)";
+$information-desktop: "only screen and (min-width: 601px)";
+
+
+// TODO change effects from style.css to sass file
+// includes link hover colors, header colors, tab colors
+body {
+	font-family: $font-stack;
+	margin-top: -16px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+}
+
+header {
+	min-width: 100%;
+	height: 75px;
+	background-color: #8991A4;
+}
+
+.header-navbar-element:hover {
+  background-color: #6D7382;
+  border-radius: 8px;
+}
+
+.coming-soon {
+	height: 60px;
+	position: absolute;
+	left: 125px;
+	top: 53px;
+	font-size: 12px;
+	visibility: false;
+	opacity: 0;
+	transition-duration: .4s;
+
+	@media #{$information-phone} {
+		top: 155px;
+	}
+}
+
+.coming-soon:hover {
+	opacity: 1;
+	transition-duration: .2s;
+}
+
+
+.active {
+	background-color: $secondary-color;
+	border-radius: 8px;
+}
+
+.active:hover {
+	background-color: $secondary-color;
+}
+
+@media #{$information-desktop} {
+	.menu-icon {
+		display: none;
+	}
+
+	.header-navbar-element {
+		margin-top: 25px;
+		padding: 4px;
+		display: inline-block;
+	}
+}
+
+@media #{$information-phone} {
+	.menu-icon {
+		width: 40px;
+		position: absolute;
+		top: 3px;
+		left: 10px;
+	}
+
+	.header-navbar-list {
+		display: none;
+		margin-left: -25px;
+		font-size: 20px;
+	}
+
+	.active {
+		border-radius: 0;
+		border-bottom: 1px solid $primary-color;
+	}
+
+	.header-navbar-element {
+		position: relative;
+		top: 75px;
+		width: 200px;
+		background-color: $secondary-color;
+		list-style: none;
+		padding: 15px;
+	}
+}
+
+.link {
+	padding: 15px;
+	text-decoration: none;
+	color: $active-text-color;
+}
+
+.profile img {
+	position: absolute;
+	top: 30%;
+	border-radius: 100px;
+
+	@media #{$information-desktop} {
+		left: 75%;
+		top: 3%;
+	}
+
+	@media #{$information-phone} {
+		width: 30%;
+		position: absolute;
+		top: 5%;
+		left: 35%;
+	}
+}
+
+.section-banner-background img {
+	max-width: 100%;
+	margin-bottom: 0;
+
+	@media #{$information-phone} {
+		height: 350px;
+	}
+}
+
+.section-button-link {
+	position: absolute;
+	top: 50%;
+	left: 44%;
+	text-decoration: none;
+	color: $secondary-color;
+	background-color: $primary-color;
+	padding: 10px 25px;
+	border-radius: 8px;
+
+	@media #{$information-phone} {
+		top: 40%;
+		left: 38%;
+	}
+}
+
+.section-button-link:hover {
+	background-color: $primary-color;
+	color: $secondary-color;
+}
+
+.section-text {
+	margin-top: -4px;
+	margin-bottom: 0; 
+	padding-top: 30px;
+	height: 100px;
+	background-color: $primary-color;
+	text-decoration: none;
+
+	@media #{$information-phone} {
+		margin-bottom: 0;
+		top: 60px;
+	}
+}
+
+.section-text a {
+	font-size: 55px;
+	padding: 20px;
+	color: #000;
+
+	@media #{$information-phone} {
+		font-size: 25px;
+		padding: 10px;
+	}
+}
+
+.section-text a:hover {
+	color: #fff;
+}
+
+.acknowlegments {
+	margin-bottom: 0;
+	background-color: $secondary-color;
+	height: 30px;
+	width: 100%;
+}
+
+.acknowlegments span {
+	margin: 30px;
+	font-size: 12px;
+}

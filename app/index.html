@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Joe Dahle | Front End Web Developer</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<img src="images/menu-icon.svg" class="menu-icon" id="menu-icon"data-bind="click: showMenu">
+
+	<header class="header">
+		<!-- <div class="header-navbar"> -->
+			<ul class="header-navbar-list">
+			<!-- TODO create data binds to toggle active class when clicked -->
+				<li id="home" class="header-navbar-element active"><a class="link" href="index.html">Home</a></li>
+				<li id="blog" class="header-navbar-element"><a class="link">Blog</a></li>
+				<li id="portfolio" class="header-navbar-element"><a class="link" href="https://flyingnarwhal.github.io/resume">Portfolio</a></li>
+				<li id="contact" class="header-navbar-element"><a class="link" href="views/contact.html">About/Contact</a></li>
+			</ul> 
+			<span class="coming-soon">Coming Soon!</span>
+		<!-- </div> -->
+	</header>
+
+	<div class="profile" id="profile">
+		<img src="images/profile-200.jpg">
+	</div>
+	
+		<!-- TODO add images to image folder, profile pic, background -->
+	<section class="section">
+		<div class="section-banner">
+			<picture class="section-banner-background">
+				<source srcset="images/background-2000.jpg" media="(min-width: 600px)">
+				<img src="images/background-600.jpg" alt="Joe Dahle | Web Developer">
+			</picture>
+			<a class="section-button-link" href="views/portfolio.html">Dive in</a>
+		</div>
+	</section>
+	<section class="section-text">
+		<div>
+			<a href="https://github.com/FlyingNarwhal" target="-blank"><i class="fa fa-github"></i></a>
+			<!-- <a href="https://github.com/FlyingNarwhal" target="-blank"><i class="fa fa-twitter-square"></i></a> -->
+			<a href="https://www.linkedin.com/in/joe-dahle-340a1a104" target="-blank"><i class="fa fa-linkedin"></i></a>
+		</div>
+	</section>
+	<footer class="acknowlegments">
+		<div class="acknowlegments">
+			<span>menu icon by Jorge Mateo from the Noun Project</span>
+		</div>
+	</footer>
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/knockout.js"></script>
+	<script src="js/app.js"></script>
+</html>
