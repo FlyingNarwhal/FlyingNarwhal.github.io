@@ -49,7 +49,7 @@ gulp.task('serve', function(){
         port: 3030
     });
 
-    gulp.watch("**/*").on('change', browserSync.reload);
+    gulp.watch("./").on('change', browserSync.reload);
 });
 
 

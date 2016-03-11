@@ -4,7 +4,8 @@ body {
   margin-top: -16px;
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  height: 100%; }
 
 header {
   min-width: 100%;
@@ -26,7 +27,7 @@ header {
   transition-duration: .4s; }
   @media only screen and (max-width: 600px) {
     .coming-soon {
-      top: 155px; } }
+      top: 150px; } }
 
 .coming-soon:hover {
   opacity: 1;
@@ -149,6 +150,25 @@ header {
   margin: 30px;
   font-size: 12px; }
 
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%); }
+
+.contact-about {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  max-width: 80%;
+  background-color: rgba(30, 30, 30, 0.7);
+  border-radius: 50px; }
+
 .clearfix {
   overflow: auto; }
 
@@ -160,32 +180,27 @@ header {
   text-decoration: none;
   color: #F5A623; }
 
-h1 {
+.resume-section-head-1 {
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
   display: inline; }
 
-h2 {
+.resume-section-head-2 {
   font-weight: bold;
   font-size: 24px;
   color: #999999;
   line-height: 29px;
   padding: 10px; }
 
-h3 {
+.resume-section-head-3 {
   font-style: italic;
   font-size: 20px;
   color: #000000;
   line-height: 22px; }
 
-h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4A4A4A;
-  line-height: 17px; }
-
-h2, h3, h4, h5 {
+.resume-section-head-2,
+.resume-section-head-3 {
   padding: 10px;
   padding-left: 5%;
   padding-right: 5%; }
@@ -222,8 +237,7 @@ h2, h3, h4, h5 {
   line-height: 28px; }
 
 #skillsH3 {
-  color: #F5AE23;
-  display: none; }
+  color: #F5AE23; }
 
 .orange {
   background-color: #F5AE23; }
@@ -246,6 +260,9 @@ h2, h3, h4, h5 {
 /* TODO: Replace with image later */
 #header {
   background-color: #484848; }
+  @media only screen and (max-width: 600px) {
+    #header {
+      min-height: 380px; } }
 
 .flex-box {
   display: -webkit-flex;

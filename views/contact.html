@@ -5,15 +5,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Joe Dahle | Contact</title>
+	<title>Joe Dahle | Contact & About</title>
 	
 	<link rel="stylesheet" type="text/css" href="../styles/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
-	<img src="images/menu-icon.svg" class="menu-icon" id="menu-icon"data-bind="click: showMenu">
+	<div class="container">
+		<img src="../images/menu-icon.svg" class="menu-icon" id="menu-icon"data-bind="click: showMenu">
 
-	<header class="header">
+		<header class="header">
 			<ul class="header-navbar-list">
 				<li id="home" class="header-navbar-element"><a class="link" href="https://flyingnarwhal.github.io">Home</a></li>
 				<li id="blog" class="header-navbar-element"><a class="link">Blog</a></li>
@@ -21,39 +22,53 @@
 				<li id="contact" class="header-navbar-element active"><a class="link" href="https://flyingnarwhal.github.io/views/contact.html">About/Contact</a></li>
 			</ul> 
 			<span class="coming-soon">Coming Soon!</span>
-	</header>
+		</header>
 
-	<section>
-		<div class="contact-email">
-			<h1 class="contact-header">It's easy to reach me...</h1>
-			<script type="text/javascript">
-				//encoded email created by hivelogic.com/enkoder 
-				//<![CDATA[
-				<!--
-				var x="function f(x){var i,o=\"\",l=x.length;for(i=l-1;i>=0;i--) {try{o+=x.c" +
-				"harAt(i);}catch(e){}}return o;}f(\")\\\"function f(x,y){var i,o=\\\"\\\\\\\""+
-				"\\\\,l=x.length;for(i=0;i<l;i++){if(i<105)y++;y%=127;o+=String.fromCharCode" +
-				"(x.charCodeAt(i)^(y++));}return o;}f(\\\"\\\\\\\\\\\\016\\\\\\\\003\\\\\\\\" +
-				"r\\\\\\\\005\\\\\\\\037\\\\\\\\021\\\\\\\\030\\\\\\\\014T\\\\\\\\013\\\\\\\\"+
-				"014hw`kg#/3p3}e|} C\\\\\\\\003NDNE_B\\\\\\\\025[\\\\\\\\\\\\\\\\P\\\\\\\\03" +
-				"1]ZUS$\\\\\\\\003\\\\\\\\\\\"\\\\*(\\\\\\\\\\\"\\\\!a2<8\\\\\\\\013{{)6\\\\" +
-				"\\\\025\\\\\\\\017\\\\\\\\000Z5I\\\\\\\\010\\\\\\\\002\\\\\\\\020\\\\\\\\03" +
-				"2\\\\\\\\031W\\\\\\\\024\\\\\\\\036!\\\\\\\\\\\"\\\\<Wngex.}w4wv:ysAKH\\\\\\"+
-				"\\032\\\\\\\\007K\\\\\\\\022\\\\\\\\014\\\\\\\\031\\\\\\\\t\\\\\\\\004\\\\\\"+
-				"\\r\\\"\\\\,105)\\\"(f};)lo,0(rtsbus.o nruter};)i(tArahc.x=+o{)--i;0=>i;1-l" +
-				"=i(rof}}{)e(hctac};l=+l;x=+x{yrt{)57=!)31/l(tAedoCrahc.x(elihw;lo=l,htgnel." +
-				"x=lo,\\\"\\\"=o,i rav{)x(f noitcnuf\")"                                      ;
-				while(x=eval(x));
-				//-->
-				//]]>
-			</script>
-			<a href="https://www.linkedin.com/in/joe-dahle-340a1a104"><span class="fa fa-linkedin-square"></span></a>
-			<a href="https://github.com/FlyingNarwhal"><span class="fa fa-github-square"></span></a>
-			<a href="https://"><span class=""></span></a>
+		<section class="contact-section">
+		<!-- keep in mind, media queries for <video> may be removed soon, if so, consider adaptive streaming -->
+			<video autoplay loop>
+				<source src="../images/bkvid.webm" type="video/webm">
+				<!-- <source src="../images/bkvid-720.webm" type="video/webm" media="all and (max-width: 1000px)"> -->
+				<!-- <source src="../images/bkvid-540.webm" type="video/webm" media="all and (max-width: 719px)"> -->
+				<source src="../images/bkvid.mp4" type="video/mp4">
+				<!-- <source src="../images/bkvid-720.mp4" type="video/mp4" media="all and (min-width: 720px)"> -->
+				<!-- <source src="../images/bkvid-540.mp4" type="video/mp4"> -->
+			</video>
 
-		</div>
-	</section>
+			<div class="contact-about">
+				<p class="contact-about-me">I'm a front-end web develper based out of Phoenix. I've always had an interest in becoming a developer, and now that I've entered the field, I realize how rewarding it truly can be.</p>	
+			</div>
 
+			<div class="contact-section">
+				<!-- <h1 class="contact-header">It's easy to reach me...</h1> -->
+
+				<script type="text/javascript">
+					//encoded email created by hivelogic.com/enkoder 
+					//<![CDATA[
+					<!--
+					var x="function f(x){var i,o=\"\",l=x.length;for(i=l-1;i>=0;i--) {try{o+=x.c" +
+					"harAt(i);}catch(e){}}return o;}f(\")\\\"function f(x,y){var i,o=\\\"\\\\\\\""+
+					"\\\\,l=x.length;for(i=0;i<l;i++){if(i<105)y++;y%=127;o+=String.fromCharCode" +
+					"(x.charCodeAt(i)^(y++));}return o;}f(\\\"\\\\\\\\\\\\016\\\\\\\\003\\\\\\\\" +
+					"r\\\\\\\\005\\\\\\\\037\\\\\\\\021\\\\\\\\030\\\\\\\\014T\\\\\\\\013\\\\\\\\"+
+					"014hw`kg#/3p3}e|} C\\\\\\\\003NDNE_B\\\\\\\\025[\\\\\\\\\\\\\\\\P\\\\\\\\03" +
+					"1]ZUS$\\\\\\\\003\\\\\\\\\\\"\\\\*(\\\\\\\\\\\"\\\\!a2<8\\\\\\\\013{{)6\\\\" +
+					"\\\\025\\\\\\\\017\\\\\\\\000Z5I\\\\\\\\010\\\\\\\\002\\\\\\\\020\\\\\\\\03" +
+					"2\\\\\\\\031W\\\\\\\\024\\\\\\\\036!\\\\\\\\\\\"\\\\<Wngex.}w4wv:ysAKH\\\\\\"+
+					"\\032\\\\\\\\007K\\\\\\\\022\\\\\\\\014\\\\\\\\031\\\\\\\\t\\\\\\\\004\\\\\\"+
+					"\\r\\\"\\\\,105)\\\"(f};)lo,0(rtsbus.o nruter};)i(tArahc.x=+o{)--i;0=>i;1-l" +
+					"=i(rof}}{)e(hctac};l=+l;x=+x{yrt{)57=!)31/l(tAedoCrahc.x(elihw;lo=l,htgnel." +
+					"x=lo,\\\"\\\"=o,i rav{)x(f noitcnuf\")"                                      ;
+					while(x=eval(x));
+					-->
+					//]]>
+				</script>
+				<!-- <a href="https://www.linkedin.com/in/joe-dahle-340a1a104"><span class="fa fa-linkedin-square"></span></a> -->
+				<!-- <a href="https://github.com/FlyingNarwhal"><span class="fa fa-github-square"></span></a> -->
+				<!-- <a href="https://"><span class=""></span></a> -->
+			</div>
+		</section>
+	</div>
 </body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="../js/knockout.js"></script>

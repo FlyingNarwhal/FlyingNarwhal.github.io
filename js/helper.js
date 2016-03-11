@@ -13,22 +13,22 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 
-var HTMLheaderName = '<h1 id="name"><a class="nameLink" href="https://flyingnarwhal.github.io">%data%</a></h1>';
-var HTMLheaderRole = '<span>%data%</span><hr/>';
+var HTMLheaderName = '<h1 id="name" class="resume-section-head-1 menuCover"><a class="nameLink" href="https://flyingnarwhal.github.io">%data%</a></h1>';
+var HTMLheaderRole = '<span class="menuCover">%data%</span><hr/ class="menuCover">';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item menuCover"><span  class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item menuCover"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item menuCover"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item menuCover"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item menuCover"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li class="flex-item menuCover"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item menuCover"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskillsStart = '<h3 class="resume-section-head-3 menuCover" id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
+var HTMLskills = '<li class="flex-item menuCover"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a class="aTag" href="#">%data%';
@@ -52,7 +52,7 @@ var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 // var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 var HTMLonlineStart = '<div class="online-entry"></div>';
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClasses = '<h3 class="resume-section-head-3">Online Classes</h3>';
 var HTMLonlineTitle = '<a class="aTag" href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';

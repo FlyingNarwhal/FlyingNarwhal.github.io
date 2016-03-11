@@ -3,6 +3,7 @@
 $font-stack: Raleway, sans-serif;
 $primary-color: #6D7382;
 $secondary-color: rgba(30,30,30,0.7);
+$tertiary-color: #F5A623;
 $active-text-color: #e1e1e1;
 
 $information-phone: "only screen and (max-width: 600px)";
@@ -17,6 +18,7 @@ body {
 	margin-left: 0;
 	margin-right: 0;
 	margin-bottom: 0;
+	height: 100%;
 }
 
 header {
@@ -41,7 +43,7 @@ header {
 	transition-duration: .4s;
 
 	@media #{$information-phone} {
-		top: 155px;
+		top: 150px;
 	}
 }
 
@@ -49,7 +51,6 @@ header {
 	opacity: 1;
 	transition-duration: .2s;
 }
-
 
 .active {
 	background-color: $secondary-color;
@@ -197,13 +198,31 @@ header {
 }
 
 // CONTACT.CSS
+video { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%); 
+}
 
+.contact-about {
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	max-width: 80%;
+	background-color: $secondary-color; 
+	border-radius: 50px;
+}
+
+.contact-section {
+
+}
 // RESUME.CSS
-// * {
-//   padding:0;
-//   margin:0;
-//   font-family: 'Roboto', sans-serif;
-// }
 
 .clearfix {
   overflow: auto;
@@ -216,17 +235,17 @@ header {
 
 .nameLink {
   text-decoration: none;
-  color: #F5A623;
+  color: $tertiary-color;
 }
 
-h1 {
+.resume-section-head-1 {
   font-size: 40px;
-  color: #F5A623;
+  color: $tertiary-color;
   line-height: 48px;
   display: inline;
 }
 
-h2 {
+.resume-section-head-2 {
   font-weight: bold;
   font-size: 24px;
   color: #999999;
@@ -234,21 +253,15 @@ h2 {
   padding: 10px;
 }
 
-h3 {
+.resume-section-head-3 {
   font-style: italic;
   font-size: 20px;
   color: #000000;
   line-height: 22px;
 }
 
-h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4A4A4A;
-  line-height: 17px;
-}
-
-h2, h3, h4, h5 {
+.resume-section-head-2,
+.resume-section-head-3 {
   padding:10px;
   padding-left: 5%;
   padding-right: 5%;
@@ -294,7 +307,7 @@ h2, h3, h4, h5 {
 
 #skillsH3 {
   color: #F5AE23;
-  display: none;
+  // display: none;
 }
 
 .orange {
@@ -323,6 +336,9 @@ h2, h3, h4, h5 {
 /* TODO: Replace with image later */
 #header {
   background-color: #484848;
+  @media #{$information-phone}{
+  	min-height: 380px;
+  }
 }
 
 .flex-box {
