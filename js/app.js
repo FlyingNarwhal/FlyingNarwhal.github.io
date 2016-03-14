@@ -1,14 +1,42 @@
 var ViewModel = function() {
+	title = ko.observable("Let's connect:");
 	this.showMenu = function(){
 		$prof = $('.profile');
 		$list = $('.header-navbar-list');
 		$button = $('.section-button-link');
 		$menuCover = $('.menuCover') || undefined;
+		$aboutMe = $('.contact-about') || undefined;
 
 		$prof.css('display', $prof.css("display") === 'none' ? '' : 'none');
 		$list.css('display', $list.css("display") === 'inline-block' ? '' : 'inline-block');
 		$button.css('display', $button.css("display") === 'none' ? '' : 'none');
 		$menuCover.css('display', $menuCover.css("display") === 'none' ? '' : 'none');
+		if($(".about-picture").css('display') === 'none'){
+			$aboutMe.animate({
+				'marginTop': "+=70px"
+			});
+		} else {
+			$aboutMe.animate({
+				'marginTop': "-=70px"
+			});
+		};
+	};
+
+	this.titleSwitch = function(el){
+		switch(el){
+			case 'linkedin': 
+				title('Linkedin');
+				break;
+			case 'email': 
+				title('Email me');
+				break;
+			case 'git':
+				title("Fork me");
+				break;
+			case 'none':
+				title("Let's connect");
+				break;
+		}
 	};
 
 	this.comingSoon = function(){
@@ -25,5 +53,13 @@ var ViewModel = function() {
 		$(".coming-soon").css("opacity", "1");
 	});
 };
+
+$(window).load(function(){
+	if($(".about-picture")){
+		var $img = $(".about-picture");
+		var scrollHeight = window.pageYOffset;
+		console.log(scrollHeight);
+	}
+});
 
 ko.applyBindings(new ViewModel());

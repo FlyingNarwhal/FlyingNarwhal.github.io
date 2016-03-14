@@ -72,6 +72,10 @@ header {
 		padding: 4px;
 		display: inline-block;
 	}
+
+	.mobile-bk {
+		display: none;
+	}
 }
 
 @media #{$information-phone} {
@@ -199,6 +203,10 @@ header {
 }
 
 // CONTACT.CSS
+.contact-container {
+	background: url("../images/bkposter.png");
+}
+
 video { 
   position: fixed;
   top: 50%;
@@ -209,22 +217,38 @@ video {
   height: auto;
   z-index: -100;
   transform: translate(-50%, -50%); 
+
+  @media #{$information-phone}{
+  	display: none;
+  }
 }
 
 .contact-about {
 	position: absolute;
-	top: 40%;
+	top: 45%;
 	left: 15%;
 	max-width: 70%;
 	background-color: $secondary-color; 
 	border-radius: 15px;
-	max-height: 55%;
+	// max-height: 50%;
+	// overflow: auto;
+
+	@media #{$information-phone}{
+		max-width: 80%;
+		left: 10%;
+		margin-bottom: 35px;
+	}
+}
+
+.contact-about-title {
+	padding: 10px 0 0 25px;
+	color: $offwhite;
 }
 
 .contact-about-me {
 	color: #e1e1e1;
-	margin-top: 55px;
-	padding: 25px;
+	margin-top: 20px;
+	padding: 10px 25px 0 25px;
 }
 
 .contact-section img {
@@ -233,16 +257,45 @@ video {
 	left: 41%;
 	max-width: 15%;
 	border-radius: 100px;
+
+	@media #{$information-phone}{
+		max-width: 50%;
+		top: 5%;
+		left: 25%;
+	}
+}
+
+.scrollMove {
+	@media #{$information-phone}{
+		position: fixed;
+		max-width: 7em;
+		top: 1em;
+		left: 18em;
+		z-index: 999;
+		-webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+	}
 }
 
 .contact-header {
 	color: $offwhite;
-	margin-left: 41%;
+	padding-left: 40%;
+
+	@media #{$information-phone}{
+		padding: 10px 25px 0 25px; 
+	}
 }
 
 .contact-section-list {
 	list-style: none;
-	margin-left: 35%;
+	padding-left: 35%;
+
+	@media #{$information-phone}{
+		padding: 0 25px 0 25px;
+	}
 }
 
 .account-link,
