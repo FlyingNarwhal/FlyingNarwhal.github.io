@@ -8,17 +8,13 @@ var ViewModel = function() {
 		$aboutMe = $('.contact-about') || undefined;
 
 		$prof.css('display', $prof.css("display") === 'none' ? '' : 'none');
-		$list.css('display', $list.css("display") === 'inline-block' ? '' : 'inline-block');
+		$list.css('display', $list.css("display") === 'block' ? '' : 'block');
 		$button.css('display', $button.css("display") === 'none' ? '' : 'none');
 		$menuCover.css('display', $menuCover.css("display") === 'none' ? '' : 'none');
+		// var rect = $('.contact-about').scrollTop();
+		console.log(window.pageYOffset);
 		if($(".about-picture").css('display') === 'none'){
-			$aboutMe.animate({
-				'marginTop': "+=70px"
-			});
-		} else {
-			$aboutMe.animate({
-				'marginTop': "-=70px"
-			});
+			$(".header").ScrollTo();
 		};
 	};
 

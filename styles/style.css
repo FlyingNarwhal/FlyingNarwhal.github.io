@@ -11,6 +11,10 @@ header {
   min-width: 100%;
   height: 75px;
   background-color: #8991A4; }
+  @media only screen and (max-width: 600px) {
+    header {
+      height: 0;
+      background-color: #000; } }
 
 .header-navbar-element:hover {
   background-color: #6D7382;
@@ -54,24 +58,24 @@ header {
 @media only screen and (max-width: 600px) {
   .menu-icon {
     width: 40px;
-    position: absolute;
+    position: fixed;
     top: 3px;
     left: 10px; }
 
   .header-navbar-list {
     display: none;
-    margin-left: -25px;
-    font-size: 20px; }
+    position: fixed;
+    margin-left: 25px;
+    font-size: 20px;
+    top: 2em;
+    width: 200px;
+    background-color: rgba(30, 30, 30, 0.7); }
 
   .active {
     border-radius: 0;
     border-bottom: 1px solid #6D7382; }
 
   .header-navbar-element {
-    position: relative;
-    top: 75px;
-    width: 200px;
-    background-color: rgba(30, 30, 30, 0.7);
     list-style: none;
     padding: 15px; } }
 .link {
@@ -153,8 +157,8 @@ header {
   margin: 30px;
   font-size: 12px; }
 
-.contact-container {
-  background: url("../images/bkposter.png"); }
+#contact-body {
+  background: url("../images/bkposter.png") no-repeat fixed; }
 
 video {
   position: fixed;
@@ -172,15 +176,15 @@ video {
 
 .contact-about {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 15%;
   max-width: 70%;
   background-color: rgba(30, 30, 30, 0.7);
   border-radius: 15px; }
   @media only screen and (max-width: 600px) {
     .contact-about {
-      max-width: 80%;
-      left: 10%;
+      max-width: 75%;
+      left: 12%;
       margin-bottom: 35px; } }
 
 .contact-about-title {
@@ -201,11 +205,11 @@ video {
   @media only screen and (max-width: 600px) {
     .contact-section img {
       max-width: 50%;
-      top: 5%;
+      top: 15%;
       left: 25%; } }
 
 @media only screen and (max-width: 600px) {
-  .scrollMove {
+  .scroll-move {
     position: fixed;
     max-width: 7em;
     top: 1em;
