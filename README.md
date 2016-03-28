@@ -1,6 +1,8 @@
 # JoeDahle.github.io
-Joe Dahle | Front End Web Developer
+##Joe Dahle | Front End Web Developer
+**NOTE: This repository will be moving soon.**
 
-This site has moved to joedahle.me, and will not be receiving regular updates.
-Although, the master branch for this project will continue to receive 
-regular commits as I see fit.
+This is a personal website for myself to showcase projects, and is still under development.
+
+###Upcoming features
+Personal Blog
