@@ -2,28 +2,29 @@
 
 // minify html, css, js
 var gulp = require('gulp');
-var htmlmin = require('gulp-htmlmin');
-// var cssmin = require('gulp-cssmin');
-// var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
- 
-gulp.task('minify', function () {
-    // gulp.src('src/**/*.css')
-    //     .pipe(cssmin())
-    //     .pipe(rename({suffix: '.min'}))
-    //     .pipe(gulp.dest('dist'));
-    gulp.src('app/*.html')
+var htmlmin = require('gulp-htmlmin'); // task dist
+var cssmin = require('gulp-cssmin'); // task dist
+var rename = require('gulp-rename'); 
+var uglify = require('gulp-uglify'); // task dist
+var responsive = require('gulp-responsive-images'); //task picture
+var browserSync = require('browser-sync').create(); //task serve
+
+gulp.task('dist', function(){
+    gulp.src('dev/styles/*.css')
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist/styles'));
+    gulp.src('dev/**/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist'));
-    gulp.src('app/js/*.js')
+    gulp.src('dev/js*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('dist'));
-});
-
-var responsive = require('gulp-responsive-images');
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist/js'));
+})
 
 gulp.task('picture', function(){
-    gulp.src('app/images/**/*')
+    gulp.src('dev/images/**/*')
         .pipe(responsive({
             'background.jpg': [{
                 width: 2000,
@@ -38,26 +39,14 @@ gulp.task('picture', function(){
                 suffix: '-200'
             }]
         }))
-        .pipe(gulp.dest('app/images'));
+        .pipe(gulp.dest('dev/images'));
 });
-
-var browserSync = require('browser-sync').create();
 
 gulp.task('serve', function(){
     browserSync.init({
-        server: "./",
+        server: "dev/",
         port: 3030
     });
 
-    gulp.watch(['index.html', 'js/**/*.js', 'styles/*.css', 'views/*.html']).on('change', browserSync.reload);
-});
-
-
-//github pages
-var gulp = require('gulp');
-var ghPages = require('gulp-gh-pages');
- 
-gulp.task('deploy', function() {
-  return gulp.src('./app/**/*')
-    .pipe(ghPages());
+    gulp.watch(['dev/index.html', 'dev/js/**/*.js', 'dev/styles/*.css', 'dev/views/*.html']).on('change', browserSync.reload);
 });
