@@ -1,0 +1,21 @@
+<!DOCTYPE html><head><meta charset="utf-8"><title>Resume</title><link href="../styles/style.min.css" rel="stylesheet" type="text/css"><script src="../js/jQuery.js"></script><script src="../js/helper.min.js"></script><script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script><meta name="viewport" content="width=device-width"></head><body unresolved><header class="header"><img src="images/menu-icon.svg" class="menu-icon" id="menu-icon" data-bind="click: showMenu"><ul class="header-navbar-list"><li id="home" class="header-navbar-element"><a class="link" href="http://joedahle.me/">Home</a></li><li id="blog" class="header-navbar-element"><a class="link">Blog</a></li><li id="portfolio" class="header-navbar-element active"><a class="link" href="http://joedahle.me/views/resume.html">Portfolio</a></li><!-- <li id="contact" class="header-navbar-element"><a class="link" href="http://joedahle.me/views/contact.html">About/Contact</a></li> --></ul><span class="coming-soon">Coming Soon!</span></header><div id="main"><div id="header" class="center-content clearfix"><ul id="topContacts" class="flex-box"></ul></div><div style="clear: both"></div><div id="workExperience" class="gray"><h2 class="resume-section-head-2">Work Experience</h2></div><div id="projects"><h2 class="resume-section-head-2">Projects</h2></div><div id="education" class="gray"><h2 class="resume-section-head-2">Education</h2></div><div id="mapDiv"><h2 class="resume-section-head-2">Where I've Lived and Worked</h2></div><div id="letsConnect" class="dark-gray"><h2 class="orange center-text">Let's Connect</h2><ul id="footerContacts" class="flex-box"></ul></div></div><script src="../js/resumeBuilder.min.js"></script><script src="../js/knockout.js"></script><script src="../js/app.min.js"></script><link href="../styles/style.min.css" rel="stylesheet" type="text/css"><script type="text/javascript">if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('topContacts').style.display = 'none';
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.display = 'none';
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.backgroundColor = '#e1e1e1';
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.backgroundColor = '#fff';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.backgroundColor = '#e1e1e1';
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('letsConnect').style.display = 'none';
+    }
+    if(document.getElementById('map') === null) {
+      document.getElementById('mapDiv').style.display = 'none';
+    }</script></body>

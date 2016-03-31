@@ -1,5 +1,3 @@
-
-
 // minify html, css, js
 var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin'); // task dist
@@ -17,7 +15,7 @@ gulp.task('dist', function(){
     gulp.src('dev/**/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist'));
-    gulp.src('dev/js*.js')
+    gulp.src('dev/js/*.js')
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/js'));
@@ -29,10 +27,12 @@ gulp.task('picture', function(){
             'background.jpg': [{
                 width: 2000,
                 suffix: '-2000'
+            },{
+                width: 1000,
+                suffix: '-1000'
             }, {
-                width: 600,
-                suffix: '-600',
-                crop: true
+                width: 500,
+                suffix: '-500',
             }],
             'profile.jpg': [{
                 width: 200,

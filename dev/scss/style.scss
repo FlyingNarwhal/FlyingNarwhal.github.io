@@ -2,30 +2,28 @@
 
 $font-stack: Raleway, sans-serif;
 $primary-color: #6D7382;
-$secondary-color: rgba(30,30,30,0.7);
+$secondary-color: rgba(30,30,30,0.4);
 $tertiary-color: #F5A623;
-$active-text-color: #e1e1e1;
+// $active-text-color: #e1e1e1;
 $offwhite: rgba(250,250,250,0.75);
+
+$text-color: #A5A5A5;
+$active-text-color: #23241F;
+$transparent-color: rgba(0,0,0,0);
 
 $information-phone: "only screen and (max-width: 600px)";
 $information-desktop: "only screen and (min-width: 601px)";
 
 
-// TODO change effects from style.css to sass file
-// includes link hover colors, header colors, tab colors
 body {
 	font-family: $font-stack;
-	margin-top: -16px;
-	margin-left: 0;
-	margin-right: 0;
-	margin-bottom: 0;
 	height: 100%;
 }
 
 header {
 	min-width: 100%;
 	height: 75px;
-	background-color: #8991A4;
+	background-color: $transparent-color;
 
 	@media #{$information-phone}{
 		height: 0;
@@ -33,38 +31,42 @@ header {
 	}
 }
 
-.header-navbar-element:hover {
-  background-color: #6D7382;
+.header-navbar-element a {
+	color: $text-color;
+}
+
+.header-navbar-element a:hover {
+  color: $active-text-color;
   border-radius: 8px;
 }
 
-.coming-soon {
-	height: 60px;
-	position: absolute;
-	left: 125px;
-	top: 53px;
-	font-size: 12px;
-	visibility: false;
-	opacity: 0;
-	transition-duration: .4s;
+// .coming-soon {
+// 	height: 60px;
+// 	position: absolute;
+// 	left: 120px;
+// 	top: 53px;
+// 	font-size: 12px;
+// 	visibility: false;
+// 	opacity: 0;
+// 	transition-duration: .4s;
 
-	@media #{$information-phone} {
-		top: 150px;
-	}
-}
+// 	@media #{$information-phone} {
+// 		top: 150px;
+// 	}
+// }
 
-.coming-soon:hover {
-	opacity: 1;
-	transition-duration: .2s;
-}
+// .coming-soon:hover {
+// 	opacity: 1;
+// 	transition-duration: .2s;
+// }
 
-.active {
-	background-color: $secondary-color;
+.active a{
+	color: $active-text-color;
 	border-radius: 8px;
 }
 
-.active:hover {
-	background-color: $secondary-color;
+.active a:hover {
+	color: $text-color;
 }
 
 @media #{$information-desktop} {
@@ -115,126 +117,24 @@ header {
 .link {
 	padding: 15px;
 	text-decoration: none;
-	color: $active-text-color;
 }
 
-.profile img {
-	position: absolute;
-	top: 30%;
-	border-radius: 100px;
+// .acknowlegments {
+// 	margin-bottom: 0;
+// 	background-color: $secondary-color;
+// 	height: 30px;
+// 	width: 100%;
+// }
 
-	@media #{$information-desktop} {
-		left: 75%;
-		top: 3%;
-	}
-
-	@media #{$information-phone} {
-		width: 30%;
-		position: absolute;
-		top: 5%;
-		left: 35%;
-	}
-}
-
-.section-banner-background img {
-	max-width: 100%;
-	margin-bottom: 0;
-
-	@media #{$information-phone} {
-		height: 350px;
-	}
-}
-
-.section-button-link {
-	position: absolute;
-	top: 50%;
-	left: 44%;
-	text-decoration: none;
-	color: $secondary-color;
-	background-color: $primary-color;
-	padding: 10px 25px;
-	border-radius: 8px;
-
-	@media #{$information-phone} {
-		top: 40%;
-		left: 38%;
-	}
-}
-
-.section-button-link:hover {
-	background-color: $primary-color;
-	color: $secondary-color;
-}
-
-.section-text {
-	margin-top: -4px;
-	margin-bottom: 0; 
-	padding-top: 30px;
-	height: 100px;
-	background-color: $primary-color;
-	text-decoration: none;
-
-	@media #{$information-phone} {
-		margin-bottom: 0;
-		top: 60px;
-	}
-}
-
-.section-text a {
-	font-size: 55px;
-	padding: 20px;
-	color: #000;
-
-	@media #{$information-phone} {
-		font-size: 25px;
-		padding: 10px;
-	}
-}
-
-.section-text a:hover {
-	color: #fff;
-}
-
-.acknowlegments {
-	margin-bottom: 0;
-	background-color: $secondary-color;
-	height: 30px;
-	width: 100%;
-}
-
-.acknowlegments span {
-	margin: 30px;
-	font-size: 12px;
-}
-
-// CONTACT.CSS
-#contact-body {
-	background: url("../images/bkposter.png") no-repeat fixed;
-}
-
-video { 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translate(-50%, -50%); 
-
-  @media #{$information-phone}{
-  	display: none;
-  }
-}
+// .acknowlegments span {
+// 	margin: 30px;
+// 	font-size: 12px;
+// }	
 
 .contact-about {
 	position: absolute;
-	top: 50%;
-	left: 15%;
-	max-width: 70%;
-	background-color: $secondary-color; 
-	border-radius: 15px;
+	top: 35%;
+	left: 35%;
 
 	@media #{$information-phone}{
 		max-width: 75%;
@@ -245,61 +145,18 @@ video {
 
 .contact-about-title {
 	padding: 10px 0 0 25px;
-	color: $offwhite;
+	color: $text-color;
 }
 
-.contact-about-me {
-	color: #e1e1e1;
-	margin-top: 20px;
-	padding: 10px 25px 0 25px;
-}
-
-.contact-section img {
+.contact-links {
 	position: absolute;
-	top: 20%;
-	left: 41%;
-	max-width: 15%;
-	border-radius: 100px;
-
-	@media #{$information-phone}{
-		max-width: 50%;
-		top: 15%;
-		left: 25%;
-	}
-}
-
-#contact-img {
-	@media #{$information-phone}{
-	position: fixed;
-	max-width: 7em;
-	top: 1em;
-	left: 18em;
-	z-index: 999;
-	-webkit-transition: all 0.5s;
-	   -moz-transition: all 0.5s;
-	   -ms-transition: all 0.5s;
-	   -o-transition: all 0.5s;
-	   transition: all 0.5s;
-	}
-}
-
-.contact-section .small img {
-	@media #{$information-phone}{
-	position: fixed;
-	max-width: 7em;
-	top: 1em;
-	left: 18em;
-	z-index: 999;
-	-webkit-transition: all 0.5s;
-	   -moz-transition: all 0.5s;
-	   -ms-transition: all 0.5s;
-	   -o-transition: all 0.5s;
-	   transition: all 0.5s;
-	}
+	width: 30%;
+	top: 75%;
+	left: 30%;
 }
 
 .contact-header {
-	color: $offwhite;
+	color: $text-color;
 	padding-left: 40%;
 
 	@media #{$information-phone}{
@@ -319,15 +176,72 @@ video {
 .account-link,
 .account-link a > span {
 	font-size: 32px;
-	color: $offwhite; 
+	// color: $offwhite;
+	color: $text-color; 
 	display: inline-block;
 	padding: 6px;
 }
 
 .account-link a > span:hover {
-	color: #fff;
+	color: $active-text-color;
 	transition-duration: .4s;
 }
+
+// #contact-img {
+// 	position: absolute;
+// 	top: 5%;
+// 	right: 5%;
+// 	max-width: 15%;
+// 	border-radius: 100px;
+
+// 	@media #{$information-phone}{
+// 		max-width: 50%;
+// 		top: 15%;
+// 		left: 25%;
+// 	}
+// }
+
+.bk-img {
+	position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
+
+// #contact-img {
+// 	@media #{$information-phone}{
+// 	position: fixed;
+// 	max-width: 7em;
+// 	top: 1em;
+// 	left: 18em;
+// 	z-index: 999;
+// 	-webkit-transition: all 0.5s;
+// 	  -moz-transition: all 0.5s;
+// 	  -ms-transition: all 0.5s;
+// 	  -o-transition: all 0.5s;
+// 	  transition: all 0.5s;
+// 	}
+// }
+
+// .contact-section .small img {
+// 	@media #{$information-phone}{
+// 	position: fixed;
+// 	max-width: 7em;
+// 	top: 1em;
+// 	left: 18em;
+// 	z-index: 999;
+// 	-webkit-transition: all 0.5s;
+// 	  -moz-transition: all 0.5s;
+// 	  -ms-transition: all 0.5s;
+// 	  -o-transition: all 0.5s;
+// 	  transition: all 0.5s;
+// 	}
+// }
 
 // RESUME.CSS
 
