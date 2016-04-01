@@ -46,6 +46,14 @@ header {
 		display: none;
 	}
 
+  .credit-icon {
+    display: none;
+  }
+
+  .credit {
+    display: none;
+  }
+
 	.header-navbar-element {
 		margin-top: 25px;
 		padding: 4px;
@@ -64,10 +72,10 @@ header {
 
 @media #{$information-phone} {
 	.menu-icon {
-		width: 40px;
+		width: 4em;
 		position: fixed;
-		top: 3px;
-		left: 10px;
+		top: 1em;
+		left: 1em;
 	}
 
 	.header {
@@ -79,7 +87,7 @@ header {
 		position: fixed;
 		font-size: 20px;
 		top: 2em;
-		width: 10em;
+		width: 6em;
 		background-color: $mobile-menu-bk-color;
 	}
 
@@ -98,7 +106,29 @@ header {
 		border-bottom: 1px solid $primary-color;
 	}
 
-	.contact-about{}
+  .credit-icon {
+    position: fixed;
+    width: 4em;
+    top: 1em;
+    right: 1em;
+  }
+
+	.credit {
+    display: none;
+    text-align: center;
+    position: fixed;
+    font-size: 14px;
+    right: 2em;
+    top: 5em;
+    width: 50%;
+    height: 25%;
+    background-color: $mobile-menu-bk-color;
+    padding: 8px;
+  }
+
+  .ack-center {
+    margin-top: 5px;
+  }
 }
 
 .link {
@@ -132,7 +162,6 @@ header {
 	margin-top: 23em;
 	list-style: none;
 	text-align: center;
-	// padding-left: 35%;
 
 	@media #{$information-phone}{
 		margin-top: -1em;
@@ -152,12 +181,6 @@ header {
 		padding: 9px;
 	}
 }
-
-// .account-link:nth-child(2) a > span{
-// 	@media #{$information-desktop}{
-// 		padding: 0 .5em 0 .5em;
-// 	}
-// }
 
 .account-link a > span:hover {
 	color: $text-color;
@@ -227,8 +250,13 @@ header {
 // 	width: 100%;
 // }
 
-// .acknowlegments span {
-// 	margin: 30px;
+// .acknowlegments {
+//   @media #{$information-desktop}{
+//     display: none;
+//   }
+//   // position: absolute;
+//   top: 95%;
+//   left: 3%;
 // 	font-size: 12px;
 // }	
 
@@ -249,6 +277,7 @@ header {
 }
 
 .resume-section-head-1 {
+  margin-top: 10em;
   font-size: 40px;
   color: $tertiary-color;
   line-height: 48px;

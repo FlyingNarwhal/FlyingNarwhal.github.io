@@ -23,6 +23,12 @@ header {
   .menu-icon {
     display: none; }
 
+  .credit-icon {
+    display: none; }
+
+  .credit {
+    display: none; }
+
   .header-navbar-element {
     margin-top: 25px;
     padding: 4px;
@@ -36,17 +42,17 @@ header {
     margin-left: -1em; } }
 @media only screen and (max-width: 600px) {
   .menu-icon {
-    width: 40px;
+    width: 4em;
     position: fixed;
-    top: 3px;
-    left: 10px; }
+    top: 1em;
+    left: 1em; }
 
   .header-navbar-list {
     display: none;
     position: fixed;
     font-size: 20px;
     top: 2em;
-    width: 10em;
+    width: 6em;
     background-color: rgba(165, 165, 165, 0.8); }
 
   .header-navbar-element {
@@ -59,7 +65,28 @@ header {
 
   .active {
     border-radius: 0;
-    border-bottom: 1px solid #6D7382; } }
+    border-bottom: 1px solid #6D7382; }
+
+  .credit-icon {
+    position: fixed;
+    width: 4em;
+    top: 1em;
+    right: 1em; }
+
+  .credit {
+    display: none;
+    text-align: center;
+    position: fixed;
+    font-size: 14px;
+    right: 2em;
+    top: 5em;
+    width: 50%;
+    height: 25%;
+    background-color: rgba(165, 165, 165, 0.8);
+    padding: 8px; }
+
+  .ack-center {
+    margin-top: 5px; } }
 .link {
   padding: 15px;
   text-decoration: none; }
@@ -131,6 +158,7 @@ header {
   color: #F5A623; }
 
 .resume-section-head-1 {
+  margin-top: 10em;
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
