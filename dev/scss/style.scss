@@ -277,7 +277,6 @@ header {
 }
 
 .resume-section-head-1 {
-  margin-top: 10em;
   font-size: 40px;
   color: $tertiary-color;
   line-height: 48px;
@@ -301,7 +300,7 @@ header {
 
 .resume-section-head-2,
 .resume-section-head-3 {
-  padding:10px;
+  padding:5px;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -346,6 +345,7 @@ header {
 
 #skillsH3 {
   color: #F5AE23;
+
   // display: none;
 }
 
@@ -376,7 +376,8 @@ header {
 #header {
   background-color: #484848;
   @media #{$information-phone}{
-  	min-height: 380px;
+  	min-height: 20em;
+    padding-top: 3em; 
   }
 }
 

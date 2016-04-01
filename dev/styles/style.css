@@ -158,7 +158,6 @@ header {
   color: #F5A623; }
 
 .resume-section-head-1 {
-  margin-top: 10em;
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
@@ -179,7 +178,7 @@ header {
 
 .resume-section-head-2,
 .resume-section-head-3 {
-  padding: 10px;
+  padding: 5px;
   padding-left: 5%;
   padding-right: 5%; }
 
@@ -240,7 +239,8 @@ header {
   background-color: #484848; }
   @media only screen and (max-width: 600px) {
     #header {
-      min-height: 380px; } }
+      min-height: 20em;
+      padding-top: 3em; } }
 
 .flex-box {
   display: -webkit-flex;

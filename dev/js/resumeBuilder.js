@@ -4,9 +4,9 @@ var bio = {
 	"name": "Joe Dahle",
 	"role": "Front-End Web Developer",
 	"contacts": {
-		"mobile": "(623) 349-1206",
-		"email": "joe.dahle at gmail.com",
-		"github": "FlyingNarwhal",
+		// "mobile": "(623) 349-1206",
+		// "email": "joe.dahle at gmail.com",
+		"github": "JoeDahle",
 		"twitter": "@FlyingNarwhal",
 		"location": "Phoenix, Arizona"
 	},
@@ -22,8 +22,8 @@ var bio = {
 		var formattedName    	  = HTMLheaderName.replace(data, bio.name);
 		var formattedRole    	  = HTMLheaderRole.replace(data, bio.role);
 		var formattedPic     	  = HTMLbioPic.replace(data, bio.bioPic);
-		var formattedMobile  	  = HTMLmobile.replace(data, bio.contacts.mobile);
-		var formattedEmail   	  = HTMLemail.replace(data, bio.contacts.email);
+		// var formattedMobile  	  = HTMLmobile.replace(data, bio.contacts.mobile);
+		// var formattedEmail   	  = HTMLemail.replace(data, bio.contacts.email);
 		var formattedGit     	  = HTMLgithub.replace(data, bio.contacts.github);
 		var formattedTwitter 	  = HTMLtwitter.replace(data, bio.contacts.twitter);
 		var formattedLocation	  = HTMLlocation.replace(data, bio.contacts.location);
@@ -32,9 +32,9 @@ var bio = {
 
 		// append header variables to page
 		$header.prepend(formattedName, formattedRole);
-		$topContacts.append(formattedMobile, formattedEmail, formattedGit, formattedTwitter, formattedLocation);
+		$topContacts.append(formattedGit, formattedTwitter, formattedLocation);
 		$header.append(formattedWelcomeMsg, formattedPic, HTMLskillsStart);
-		$footerContacts.append(formattedMobile, formattedEmail, formattedGit, formattedTwitter, formattedLocation);
+		$footerContacts.append(formattedGit, formattedTwitter, formattedLocation);
 
 		for(var skill in bio.skills){
 			formattedSkills = HTMLskills.replace(data, bio.skills[skill]);
