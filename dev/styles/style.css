@@ -17,14 +17,7 @@ header {
 
 .header-navbar-element a:hover {
   color: #23241F;
-  border-radius: 8px; }
-
-.active a {
-  color: #23241F;
-  border-radius: 8px; }
-
-.active a:hover {
-  color: #A5A5A5; }
+  border-bottom: 1px solid #23241F; }
 
 @media only screen and (min-width: 601px) {
   .menu-icon {
@@ -35,8 +28,9 @@ header {
     padding: 4px;
     display: inline-block; }
 
-  .mobile-bk {
-    display: none; } }
+  .active a {
+    color: #23241F;
+    border-bottom: 1px solid #23241F; } }
 @media only screen and (max-width: 600px) {
   .menu-icon {
     width: 40px;
@@ -47,66 +41,69 @@ header {
   .header-navbar-list {
     display: none;
     position: fixed;
-    margin-left: 25px;
     font-size: 20px;
     top: 2em;
-    width: 200px;
-    background-color: rgba(30, 30, 30, 0.4); }
-
-  .active {
-    border-radius: 0;
-    border-bottom: 1px solid #6D7382; }
+    width: 10em;
+    background-color: rgba(165, 165, 165, 0.8); }
 
   .header-navbar-element {
     list-style: none;
-    padding: 15px; } }
+    padding: 15px;
+    margin-left: -2em; }
+
+  .header-navbar-element a {
+    color: #23241F; }
+
+  .active {
+    border-radius: 0;
+    border-bottom: 1px solid #6D7382; } }
 .link {
   padding: 15px;
   text-decoration: none; }
 
 .contact-about {
-  position: absolute;
-  top: 35%;
-  left: 35%; }
+  text-align: center; }
   @media only screen and (max-width: 600px) {
     .contact-about {
-      max-width: 75%;
-      left: 12%;
-      margin-bottom: 35px; } }
+      line-height: 27em;
+      height: 27em; } }
 
 .contact-about-title {
+  text-align: center;
+  font-size: 32px;
   padding: 10px 0 0 25px;
-  color: #A5A5A5; }
-
-.contact-links {
-  position: absolute;
-  width: 30%;
-  top: 75%;
-  left: 30%; }
+  color: #FFF; }
 
 .contact-header {
-  color: #A5A5A5;
-  padding-left: 40%; }
-  @media only screen and (max-width: 600px) {
-    .contact-header {
-      padding: 10px 25px 0 25px; } }
+  color: #23241F;
+  transition-duration: .4s;
+  font-size: 16px;
+  text-align: center; }
 
 .contact-section-list {
+  margin-top: 22em;
   list-style: none;
-  padding-left: 35%; }
+  text-align: center; }
   @media only screen and (max-width: 600px) {
     .contact-section-list {
-      padding: 0 25px 0 25px; } }
+      margin-top: -1em;
+      position: absolute;
+      margin-left: 1em;
+      padding: 5em; } }
 
 .account-link,
 .account-link a > span {
   font-size: 32px;
-  color: #A5A5A5;
+  color: #FFF;
   display: inline-block;
   padding: 6px; }
+  @media only screen and (max-width: 600px) {
+    .account-link,
+    .account-link a > span {
+      padding: 9px; } }
 
 .account-link a > span:hover {
-  color: #23241F;
+  color: #A5A5A5;
   transition-duration: .4s; }
 
 .bk-img {

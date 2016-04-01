@@ -12,9 +12,9 @@ gulp.task('dist', function(){
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/styles'));
-    gulp.src('dev/**/*.html')
-        .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('dist'));
+    // gulp.src('dev/**/*.html')
+    //     .pipe(htmlmin({collapseWhitespace: true}))
+    //     .pipe(gulp.dest('dist'));
     gulp.src('dev/js/*.js')
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))

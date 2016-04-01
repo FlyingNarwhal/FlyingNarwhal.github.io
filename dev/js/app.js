@@ -1,5 +1,5 @@
 var ViewModel = function() {
-	title = ko.observable("Let's connect:");
+	title = ko.observable("");
 	this.showMenu = function(){
 		$prof = $('.profile');
 		$list = $('.header-navbar-list');
@@ -23,7 +23,7 @@ var ViewModel = function() {
 	this.titleSwitch = function(el){
 		switch(el){
 			case 'linkedin': 
-				title('Linkedin');
+				title("Let's connect");
 				break;
 			case 'email': 
 				title('Email me');
@@ -32,7 +32,7 @@ var ViewModel = function() {
 				title("Fork me");
 				break;
 			case 'none':
-				title("Let's connect");
+				title("");
 				break;
 		}
 	};
