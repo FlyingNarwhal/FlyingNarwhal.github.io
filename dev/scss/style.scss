@@ -56,6 +56,10 @@ header {
 		color: $active-text-color;
 		border-bottom: 1px solid $active-text-color;
 	}
+
+	.contact-links {
+		margin-left: -1em;
+	}
 }
 
 @media #{$information-phone} {
@@ -114,7 +118,6 @@ header {
 .contact-about-title {
 	text-align: center;
 	font-size: 32px;
-	padding: 10px 0 0 25px;
 	color: #FFF;
 }
 
@@ -126,7 +129,7 @@ header {
 }
 
 .contact-section-list {
-	margin-top: 22em;
+	margin-top: 23em;
 	list-style: none;
 	text-align: center;
 	// padding-left: 35%;
@@ -144,11 +147,17 @@ header {
 	font-size: 32px;
 	color: #FFF; 
 	display: inline-block;
-	padding: 6px;
+	padding: 0 .2em;
 	@media #{$information-phone}{
 		padding: 9px;
 	}
 }
+
+// .account-link:nth-child(2) a > span{
+// 	@media #{$information-desktop}{
+// 		padding: 0 .5em 0 .5em;
+// 	}
+// }
 
 .account-link a > span:hover {
 	color: $text-color;
