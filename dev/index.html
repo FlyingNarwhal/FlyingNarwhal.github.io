@@ -44,6 +44,7 @@
 			<div class="contact-links">
 				<ul class="contact-section-list">
 					<script type="text/javascript">
+					// Change this, so that the click will open the contact form
 						//<![CDATA[
 						<!--
 						var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
@@ -71,10 +72,21 @@
 						//]]>
 					</script>
 
-					<li class="account-link" data-bind="event:{mouseover: titleSwitch.bind(titleSwitch, 'linkedin'), mouseout:titleSwitch.bind(titleSwitch, 'none')}"><a href="https://www.linkedin.com/in/joe-dahle-340a1a104" title="linkedin"><span class="fa fa-linkedin-square fa-lg"></span></a></li>
-					<li class="account-link" data-bind="event:{mouseover: titleSwitch.bind(titleSwitch, 'git'), mouseout:titleSwitch.bind(titleSwitch, 'none')}"><a href="https://github.com/FlyingNarwhal" title="github"><span class="fa fa-github-square fa-lg"></span></a></li>
+					<li class="account-link" data-bind="event:{mouseover: titleSwitch.bind(titleSwitch, 'linkedin'), mouseout:titleSwitch.bind(titleSwitch, 'none')}"><a href="https://www.linkedin.com/in/joedahle" title="linkedin"><span class="fa fa-linkedin-square fa-lg"></span></a></li>
+					<li class="account-link" data-bind="event:{mouseover: titleSwitch.bind(titleSwitch, 'git'), mouseout:titleSwitch.bind(titleSwitch, 'none')}"><a href="https://github.com/JoeDahle" title="github"><span class="fa fa-github-square fa-lg"></span></a></li>
 				</ul>
 				<h1 class="contact-header" data-bind="text: title"></h1>
+			</div>
+			<div class="contact-emailForm">
+				<label for="email">Email</label>
+				<input id="email" class="contact-form-email" autocomplete="email" data-bind="textInput: emailQuery"></input>
+				<label for="name">Name</label>
+				<input id="name" class="contact-form-name" autocomplete="name" data-bind="textInput: senderName"></input>
+				<label for="subject">Email Subject</label>
+				<input id="subject" class="contact-form-subject" data-bind="textInput: emailSubject"></input>
+				<label for="body">Body</label>
+				<textarea id="body" class="contact-form-email" data-bind="textInput: emailBody"></textarea id="body">
+				<button data-bind="click: newEmail">submit</button>
 			</div>
 		</section>
 	</div>
