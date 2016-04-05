@@ -1,42 +1,44 @@
 #!/usr/bin/python 
+print "Content-type: text/html\n"
+print
+
+import cgi
+import cgitb 
+cgitb.enable()
 
 import smtplib
-import json
-import sys
 
 from email.mime.text import MIMEText
 
-# save our JSON data from the email form as a 
-# python dictionary
+form = cgi.FieldStorage()
 
-# data = json.load(sys.stdin)
-data = {"SenderName": "joe",
- "Subject": "test",
- "Body": "testing",
- "SenderEmail": "joe.dahle@gmail.com"}
+variable = ""
+value = ""
+r = ""
+data = {}
+for key in form.keys():
+        variable = str(key)
+        value = str(form.getvalue(variable))
+        # r += "<p>"+ variable +", "+ value +"</p>\n" 
+        # fields = "<p>"+ str(r) +"</p>"
+        data[variable] = value
+        print data
 
-## variables for the contact email
-# Message body
-msg = MIMEText(data['SenderName'] + data['Body'])
-# Message subject
+from email.mime.text import MIMEText
+
+msg = MIMEText("New contact from %s  %s \n Message: \n %s" % (unicode(data['SenderName']), unicode(data['SenderEmail']), unicode(data['Body'])))
 msg['Subject'] = data['Subject']
-# Mailgun Sending domain
-msg['From']    = 'contact@joedahle.me'
-# recipient or ME
-msg['To']      = 'joe@joedahle.me'
-# Mailgun server and port
+msg['From']    = "contact@joedahle.me"
+msg['To']      = 'joe.dahle@gmail.com'
+
+confMsg = MIMEText("complete later")
+confMsg['Subject'] = "Thank you"
+confMsg['From']    = "contact@joedahle.me"
+confMsg['To']      = data['SenderEmail']
+
 s = smtplib.SMTP('smtp.mailgun.org', 587)
 
-## variables for the confirmation email
-# Message body
-confMsg = MIMEText('Thank you %s for reaching out to me, I\'ll try to get back to you as soon as possible.', data['SenderName'])
-# Message subject
-confMsg['Subject'] = 'Thank you'
-# Recipient or initiator
-confMsg['To'] = data['SenderEmail']
-
-#mailgun login
 s.login('postmaster@mg.joedahle.me', '75e0d29fb3beb8016e357bdcf09e2585')
 s.sendmail(msg['From'], msg['To'], msg.as_string())
-s.sendmail(msg['From'], confMsg['To'], confMsg.as_string())
+s.sendmail(confMsg['From'], confMsg['To'], confMsg.as_string())
 s.quit()

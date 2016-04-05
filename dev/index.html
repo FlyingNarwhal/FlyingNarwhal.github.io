@@ -78,15 +78,17 @@
 				<h1 class="contact-header" data-bind="text: title"></h1>
 			</div>
 			<div class="contact-emailForm">
-				<label for="email">Email</label>
-				<input id="email" class="contact-form-email" autocomplete="email" data-bind="textInput: emailQuery"></input>
-				<label for="name">Name</label>
-				<input id="name" class="contact-form-name" autocomplete="name" data-bind="textInput: senderName"></input>
-				<label for="subject">Email Subject</label>
-				<input id="subject" class="contact-form-subject" data-bind="textInput: emailSubject"></input>
-				<label for="body">Body</label>
-				<textarea id="body" class="contact-form-email" data-bind="textInput: emailBody"></textarea id="body">
-				<button data-bind="click: newEmail">submit</button>
+				<form action="/cgi-bin/mailer.py" method="post">
+					<label for="email">Email</label>
+					<input id="email" class="contact-form-email" name="SenderEmail" autocomplete="email" data-bind="textInput: emailQuery"></input>
+					<label for="name">Name</label>
+					<input id="name" class="contact-form-name" name="SenderName" autocomplete="name" data-bind="textInput: senderName"></input>
+					<label for="subject">Email Subject</label>
+					<input id="subject" class="contact-form-subject" name="Subject" data-bind="textInput: emailSubject"></input>
+					<label for="body">Body</label>
+					<textarea id="body" class="contact-form-email" name="Body" data-bind="textInput: emailBody"></textarea id="body">
+					<button type="submit" value="Submit"></button>
+				</form>
 			</div>
 		</section>
 	</div>
