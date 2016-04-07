@@ -37,59 +37,59 @@
 
 			<img class="bk-img" src="images/background-500.jpg" srcset="images/background-1000.jpg 1000w, images/background-2000.jpg 2x" alt="office picture, yo">	
 			
-			<div class="contact-about">
+			<div class="contact-about" data-bind="">
 				<h1 class="contact-about-title">Web Developer</h1>
 			</div>
+			<div class="contact-form" data-bind="">
+				<form action="cgi-bin/mailer.py" method="post">
 
-			<div class="contact-links">
-				<ul class="contact-section-list">
-					<script type="text/javascript">
-					// Change this, so that the click will open the contact form
-						//<![CDATA[
-						<!--
-						var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
-						"x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av" +
-						" r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!43{)rt{y+xx=l;=+;" +
-						"lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\" +
-						"\"(8),8\\\"\\\\2=W;34\\\\0 \\\\jg<-_@21l86a01\\\\\\\\1M82\\\\ \\\\\\\\1\\\\" +
-						"03\\\\\\\\3R`o\\\"\\\\\\\\\\\\6e01\\\\\\\\rQpkel_S.xdg\\\"\\\\\\\\\\\\\\\"\\"+
-						"\\\\\\\\\\03\\\\0m\\\\g}cnP^77\\\\1~\\\\>u\\\\>\\\\\\\\b\\\\grog\\\\e\\\\\\" +
-						"\\b\\\\k#vjni\\\\\\\\36\\\\0<\\\\cR.o33\\\\0R\\\\ovgb4o02\\\\\\\\{~lao8\\\\" +
-						"nR\\\\ow k\\\\\\\\\\\\\\\\XC|{\\\\n\\\\\\\"a\\\\CB'^07\\\\0P\\\\2_02\\\\\\\\"+
-						"30\\\\02\\\\03\\\\\\\\32\\\\0T\\\\]R30\\\\04\\\\01\\\\\\\\32\\\\04\\\\00\\\\"+
-						"\\\\33\\\\08\\\\17\\\\05\\\\00\\\\\\\\34\\\\06\\\\01\\\\\\\\22\\\\0M\\\\00\\"+
-						"\\0r\\\\\\\\\\\\13\\\\03\\\\00\\\\\\\\7N)=,5\\\\t<\\\\#4!?'n>'<5\\\\;\\\\\\" +
-						"\"!\\\\fko`/+)$e&la]WUIiL\\\\\\\\\\\\\\\\CTA_34\\\\0W\\\\\\\\\\\\\\\\\\\\RX" +
-						"01\\\\0F\\\\XN]BMzRKPL03\\\\00\\\\03\\\\\\\\ESqioxunctb-q{weL3j2ec'i|hbf&%i" +
-						"_io22\\\\0P\\\\10\\\\05\\\\02\\\\\\\\17\\\\06\\\\02\\\\\\\\33\\\\04\\\\02\\" +
-						"\\\\\\27\\\\0W\\\\N(01\\\\02\\\\00\\\\\\\\21\\\\03\\\\00\\\\\\\\\\\\rM\\\\0" +
-						"5\\\\07\\\\00\\\\\\\\KVt@\\\\\\\\\\\\n0\\\\00\\\\\\\\20\\\\0n\\\\\\\\\\\\20" +
-						"\\\\06\\\\02\\\\\\\\+N80.169\\\\<(\\\"}fo;n uret}r);+)y+^(i)t(eAodrCha.c(xd" +
-						"eCoarChomfrg.intr=So+7;12%=;y=2y*))+y88>((iif){++;i<l;i=0(ior;fthnglex.l=\\" +
-						"\\,\\\\\\\"=\\\",o iar{vy)x,f(n ioctun\\\"f)\")"                             ;
-						while(x=eval(x));
-						//-->
-						//]]>
-					</script>
-
-					<li class="account-link" data-bind="event:{mouseover: titleSwitch.bind(titleSwitch, 'linkedin'), mouseout:titleSwitch.bind(titleSwitch, 'none')}"><a href="https://www.linkedin.com/in/joedahle" title="linkedin"><span class="fa fa-linkedin-square fa-lg"></span></a></li>
-					<li class="account-link" data-bind="event:{mouseover: titleSwitch.bind(titleSwitch, 'git'), mouseout:titleSwitch.bind(titleSwitch, 'none')}"><a href="https://github.com/JoeDahle" title="github"><span class="fa fa-github-square fa-lg"></span></a></li>
+				<ul class="contact-form-ul">
+					<li>
+						<h1>Contact me</h1>
+					</li>
+					<li>
+						<label for="name">Name</label>
+						<input type="text" id="name" name="SenderName" autocomplete="name" placeholder="Cosmo Kramer" required></input>
+					</li>
+					<li>
+						<label for="email">Email</label>
+						<input type="email" id="email" name="SenderEmail" autocomplete="email" data-bind="textInput: emailQuery" placeholder="kman@kramerica.com" data-bind="textInput: emailQuery" require></input>
+					</li>
+					<li>
+						<label for="body">Message</label>
+						<br>
+						<br>
+						<textarea id="body" placeholder="What's up?"></textarea>
+					</li>
+					<li>
+						<button class="formSubmit" type="submit" value="Submit" data-bind="enable: validEmail">Submit</button>
+					</li>
 				</ul>
-				<h1 class="contact-header" data-bind="text: title"></h1>
-			</div>
-			<div class="contact-emailForm">
-				<form action="/cgi-bin/mailer.py" method="post">
-					<label for="email">Email</label>
-					<input id="email" class="contact-form-email" name="SenderEmail" autocomplete="email" data-bind="textInput: emailQuery"></input>
+					<!-- <label for="email">Email</label>
+					<input id="email" class="contact-form-email" name="SenderEmail" autocomplete="email" data-bind="textInput: emailQuery" placeholder="kman@kramerica.com"></input>
+					<br><br>
 					<label for="name">Name</label>
-					<input id="name" class="contact-form-name" name="SenderName" autocomplete="name" data-bind="textInput: senderName"></input>
+					<input id="name" class="contact-form-name" name="SenderName" autocomplete="name" data-bind="textInput: senderName" placeholder="Cosmo Kramer"></input>
+					<br><br>
 					<label for="subject">Email Subject</label>
 					<input id="subject" class="contact-form-subject" name="Subject" data-bind="textInput: emailSubject"></input>
+					<br><br>
 					<label for="body">Body</label>
-					<textarea id="body" class="contact-form-email" name="Body" data-bind="textInput: emailBody"></textarea id="body">
-					<button type="submit" value="Submit"></button>
+					<textarea id="body" class="contact-form-email" name="Body" data-bind="textInput: emailBody"></textarea>
+					<br><br>
+					<button class="contact-submit-btn" type="submit" value="Submit" data-bind="enable: validEmail">Submit</button> -->
 				</form>
 			</div>
+			<!-- <h1 class="contact-header" data-bind="text: title"></h1> -->
+			<div class="contact-links">
+
+				<ul class="contact-section-list">
+					<li class="account-link"><a href="/" title="email"><span class="fa fa-envelope fa-lg"></span></a></li>
+					<li class="account-link"><a href="https://www.linkedin.com/in/joedahle" title="linkedin"><span class="fa fa-linkedin-square fa-lg"></span></a></li>
+					<li class="account-link"><a href="https://github.com/JoeDahle" title="github"><span class="fa fa-github-square fa-lg"></span></a></li>
+				</ul>
+			</div>
+		
 		</section>
 	</div>
 </body>

@@ -20,22 +20,22 @@ var ViewModel = function() {
 		$credit.css('display', $credit.css("display") === 'block' ? '' : 'block');
 	}
 
-	this.titleSwitch = function(el){
-		switch(el){
-			case 'linkedin': 
-				title("Let's connect");
-				break;
-			case 'email': 
-				title('Email me');
-				break;
-			case 'git':
-				title("Fork me");
-				break;
-			case 'none':
-				title("");
-				break;
-		}
-	};
+	// this.titleSwitch = function(el){
+	// 	switch(el){
+	// 		case 'linkedin': 
+	// 			title("Let's connect");
+	// 			break;
+	// 		case 'email': 
+	// 			title('Email me');
+	// 			break;
+	// 		case 'git':
+	// 			title("Fork me");
+	// 			break;
+	// 		case 'none':
+	// 			title("");
+	// 			break;
+	// 	}
+	// };
 
 	// This is for the web worker mailWorker.js
 	// TODO create form field checks
@@ -44,14 +44,16 @@ var ViewModel = function() {
 	// Check validity of users input as email address
 	this.emailQuery = ko.observable('');
 	this.validEmail = ko.computed(function(){
-		var filter = ko.observable(this.emailQuery);
+		var filter = ko.observable(that.emailQuery())
 		if(filter()){
 			// Check that the email provided is a of type "johndoe@example.com"
 			var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
 			if(testEmail.test(filter())){
+				$('.contact-submit-btn').removeClass('invalid-email');
+				$('.contact-submit-btn').addClass('valid-email');
 				return true;
 			} else {
-				// return false, prompting user to check email
+				$('.contact-submit-btn').addClass('invalid-email');
 				return false;
 			}
 		}
@@ -59,35 +61,6 @@ var ViewModel = function() {
 	this.senderName = ko.observable('');
 	this.emailSubject = ko.observable('');
 	this.emailBody = ko.observable('');
-	this.newEmail = function(){
-		// initialize form field variables
-
-		//Obtain form data
-		formValues = {
-			'SenderName': that.senderName(),
-			'SenderEmail': that.validEmail(),
-			'Subject': that.emailSubject(),
-			'Body': that.emailBody()
-		};
-
-		$.ajax({
-    	url: "../cgi-bin/mailer.py",
-    	type: "post",
-    	contentType: "application/json; charset=utf-8",
-    	dataType: "json",
-    	data: JSON.stringify({
-      	data: formValues
-    	}),
-    	success: function(response){
-      	console.log('ajax success');
-   	  }
- 		});
-
-		// mailWorker.postMessage(formValues)
-		// mailWorker.onMessage = function(e){
-		// 	console.log(e.data);
-		// }
-	}
 };
 
 ko.applyBindings(new ViewModel());

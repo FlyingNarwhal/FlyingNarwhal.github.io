@@ -10,7 +10,6 @@ var browserSync = require('browser-sync').create(); //task serve
 gulp.task('dist', function(){
     gulp.src('dev/styles/*.css')
         .pipe(cssmin())
-        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/styles'));
     // gulp.src('dev/**/*.html')
     //     .pipe(htmlmin({collapseWhitespace: true}))
