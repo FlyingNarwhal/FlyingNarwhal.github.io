@@ -99,8 +99,13 @@ header {
     background-color: rgba(165, 165, 165, 0.8);
     padding: 8px; } }
 
+.front {
+  position: fixed; }
+
+.back {
+  position: fixed; }
+
 .contact-about {
-  display: none;
   width: 100%;
   text-align: center; }
   @media only screen and (max-width: 600px) {
@@ -117,10 +122,17 @@ header {
       font-size: 5em; } }
 
 .contact-form {
+  display: none;
   position: fixed;
   width: 24em;
+  top: 6em;
   left: 50%;
   margin-left: -12em; }
+  @media only screen and (max-width: 600px) {
+    .contact-form {
+      width: 22em;
+      margin-left: -11em;
+      top: 5em; } }
 
 .contact-form-ul {
   width: 24em;
@@ -131,15 +143,25 @@ header {
   padding: 0;
   background-color: rgba(165, 165, 165, 0.8);
   border-radius: 2px; }
+  @media only screen and (max-width: 600px) {
+    .contact-form-ul {
+      width: 22em;
+      height: 25em; } }
 
 .contact-form li {
   padding: 1em;
   position: relative;
   width: 22em; }
+  @media only screen and (max-width: 600px) {
+    .contact-form li {
+      padding: 0.5em; } }
 
 .contact-form h1 {
   margin: 0;
   display: inline-block; }
+  @media only screen and (max-width: 600px) {
+    .contact-form h1 {
+      font-size: 26px; } }
 
 .contact-form label {
   width: 2.5em;
@@ -148,6 +170,9 @@ header {
   float: left;
   padding: 3px;
   font-size: 16px; }
+  @media only screen and (max-width: 600px) {
+    .contact-form label {
+      font-size: 22px; } }
 
 .contact-form-ul input, .contact-form-ul textarea {
   width: 12em;
@@ -164,6 +189,9 @@ header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px; }
+  @media only screen and (max-width: 600px) {
+    .contact-form-ul input, .contact-form-ul textarea {
+      padding: 6px 12px; } }
 
 .contact-form-ul input:focus, .contact-form-ul textarea:focus {
   background: #fff;
@@ -172,6 +200,10 @@ header {
 .contact-form-ul li > textarea {
   height: 10em;
   width: 26em; }
+  @media only screen and (max-width: 600px) {
+    .contact-form-ul li > textarea {
+      width: 25em;
+      height: 11em; } }
 
 .contact-form button {
   float: right;
@@ -183,6 +215,9 @@ header {
   -moz-border-radius: 5px;
   cursor: pointer;
   cursor: hand; }
+  @media only screen and (max-width: 600px) {
+    .contact-form button {
+      float: left; } }
 
 .contact-form button:hover {
   border: 1px solid #39504E;
@@ -197,9 +232,18 @@ header {
       transform: translate(-50%, -50%);
       margin: 0 auto;
       bottom: -1.5em; } }
+  @media only screen and (max-width: 600px) {
+    .contact-links {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      margin-left: -8.5em; } }
 
 .contact-section-list li {
   display: inline-block; }
+  @media only screen and (max-width: 600px) {
+    .contact-section-list li {
+      bottom: 0; } }
 
 .contact-section-list span {
   color: #A5A5A5;
@@ -212,6 +256,10 @@ header {
     .contact-section-list span {
       padding: 0 .5em 0 .5em;
       font-size: 3em; } }
+
+.contact-section-list span:nth-child(1) {
+  padding-left: 0;
+  margin-left: 0; }
 
 .contact-section-list span:hover {
   color: #e1e1e1;

@@ -146,8 +146,16 @@ header {
   }
 }
 
+.front {
+  position: fixed;
+}
+
+.back {
+  position: fixed;
+}
+
 .contact-about {
-  display: none;
+  // display: none;
   width: 100%;
   text-align: center;
 
@@ -169,10 +177,18 @@ header {
 }
 
 .contact-form {
+  display: none;
   position: fixed;
   width: 24em;
+  top: 6em;
   left: 50%;
   margin-left: -12em;
+
+  @media #{$information-phone} {
+    width: 22em;
+    margin-left: -11em;
+    top: 5em;
+  }
 }
 
 .contact-form-ul {
@@ -184,18 +200,30 @@ header {
   padding: 0;
   background-color: $mobile-menu-bk-color;
   border-radius: 2px;
+
+  @media #{$information-phone} {
+    width: 22em;
+    height: 25em;
+  }
 }
 
 .contact-form li {
   padding: 1em;
   position: relative;
   width: 22em;
+
+  @media #{$information-phone} {
+    padding: 0.5em;
+  }
 }
 
 .contact-form h1 {
   margin: 0;
   display: inline-block;
-  // color: $active-text-color;
+
+  @media #{$information-phone} {
+    font-size: 26px;
+  }
 }
 
 .contact-form label {
@@ -205,6 +233,10 @@ header {
   float:left;
   padding:3px;
   font-size: 16px;
+
+  @media #{$information-phone} {
+    font-size: 22px;
+  }
 }
 
 .contact-form-ul input, .contact-form-ul textarea {
@@ -223,7 +255,11 @@ header {
   background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
   box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
   -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
-  -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;   
+  -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+
+  @media #{$information-phone} {
+    padding: 6px 12px;
+  } 
 }
 
 .contact-form-ul input:focus, .contact-form-ul textarea:focus {
@@ -234,6 +270,11 @@ header {
 .contact-form-ul li > textarea {
   height: 10em;
   width: 26em;
+
+  @media #{$information-phone} {
+    width: 25em;
+    height: 11em;
+  }
 }
 
 .contact-form button {
@@ -246,6 +287,11 @@ header {
   -moz-border-radius: 5px;
   cursor: pointer;
   cursor: hand;
+
+  @media #{$information-phone} {
+    float: left;
+
+  }
 }
 
 .contact-form button:hover {
@@ -265,12 +311,21 @@ header {
   }
 
   @media #{$information-phone} {
-
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -8.5em;
   }
 }
 
 .contact-section-list li {
   display: inline-block;
+
+  @media #{$information-phone} {
+    // position: absolute;
+    bottom: 0;
+    // width: 100%;
+  }
 }
 
 .contact-section-list span {
@@ -285,6 +340,11 @@ header {
     padding: 0 .5em 0 .5em;
     font-size: 3em;
   }
+}
+
+.contact-section-list span:nth-child(1) {
+  padding-left: 0;
+  margin-left: 0; 
 }
 
 .contact-section-list span:hover {

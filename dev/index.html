@@ -36,60 +36,45 @@
 		<section class="contact-section">
 
 			<img class="bk-img" src="images/background-500.jpg" srcset="images/background-1000.jpg 1000w, images/background-2000.jpg 2x" alt="office picture, yo">	
-			
-			<div class="contact-about" data-bind="">
-				<h1 class="contact-about-title">Web Developer</h1>
-			</div>
-			<div class="contact-form" data-bind="">
-				<form action="cgi-bin/mailer.py" method="post">
 
-				<ul class="contact-form-ul">
-					<li>
-						<h1>Contact me</h1>
-					</li>
-					<li>
-						<label for="name">Name</label>
-						<input type="text" id="name" name="SenderName" autocomplete="name" placeholder="Cosmo Kramer" required></input>
-					</li>
-					<li>
-						<label for="email">Email</label>
-						<input type="email" id="email" name="SenderEmail" autocomplete="email" data-bind="textInput: emailQuery" placeholder="kman@kramerica.com" data-bind="textInput: emailQuery" require></input>
-					</li>
-					<li>
-						<label for="body">Message</label>
-						<br>
-						<br>
-						<textarea id="body" placeholder="What's up?"></textarea>
-					</li>
-					<li>
-						<button class="formSubmit" type="submit" value="Submit" data-bind="enable: validEmail">Submit</button>
-					</li>
-				</ul>
-					<!-- <label for="email">Email</label>
-					<input id="email" class="contact-form-email" name="SenderEmail" autocomplete="email" data-bind="textInput: emailQuery" placeholder="kman@kramerica.com"></input>
-					<br><br>
-					<label for="name">Name</label>
-					<input id="name" class="contact-form-name" name="SenderName" autocomplete="name" data-bind="textInput: senderName" placeholder="Cosmo Kramer"></input>
-					<br><br>
-					<label for="subject">Email Subject</label>
-					<input id="subject" class="contact-form-subject" name="Subject" data-bind="textInput: emailSubject"></input>
-					<br><br>
-					<label for="body">Body</label>
-					<textarea id="body" class="contact-form-email" name="Body" data-bind="textInput: emailBody"></textarea>
-					<br><br>
-					<button class="contact-submit-btn" type="submit" value="Submit" data-bind="enable: validEmail">Submit</button> -->
+			<div class="contact-about">
+				<h1 class="contact-about-title">Web Developer</h1>
+			</div>	
+
+			<div class="contact-form">
+				<form action="cgi-bin/mailer.py" method="post">
+					<ul class="contact-form-ul">
+						<li>
+							<h1>Contact me</h1>
+						</li>
+						<li>
+							<label for="name">Name</label>
+							<input type="text" id="name" name="SenderName" autocomplete="name" placeholder="Cosmo Kramer" require></input>
+						</li>
+						<li>
+							<label for="email">Email</label>
+							<input type="email" id="email" name="SenderEmail" autocomplete="email" data-bind="textInput: emailQuery" placeholder="kman@kramerica.com" data-bind="textInput: emailQuery" require></input>
+						</li>
+						<li>
+							<label for="body">Message</label>
+							<br>
+							<br>
+							<textarea id="body" placeholder="What's up?"></textarea>
+						</li>
+						<li>
+							<button class="formSubmit" type="submit" value="Submit" data-bind="enable: validEmail">Submit</button>
+						</li>
+					</ul>
 				</form>
 			</div>
-			<!-- <h1 class="contact-header" data-bind="text: title"></h1> -->
-			<div class="contact-links">
 
+			<div class="contact-links">
 				<ul class="contact-section-list">
-					<li class="account-link"><a href="/" title="email"><span class="fa fa-envelope fa-lg"></span></a></li>
+					<li class="account-link" data-bind="click: showForm"><a title="email"><span class="fa fa-envelope fa-lg"></span></a></li>
 					<li class="account-link"><a href="https://www.linkedin.com/in/joedahle" title="linkedin"><span class="fa fa-linkedin-square fa-lg"></span></a></li>
 					<li class="account-link"><a href="https://github.com/JoeDahle" title="github"><span class="fa fa-github-square fa-lg"></span></a></li>
 				</ul>
 			</div>
-		
 		</section>
 	</div>
 </body>

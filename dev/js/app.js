@@ -1,5 +1,5 @@
 var ViewModel = function() {
-	that = this;
+	var that = this;
 	title = ko.observable("");
 	this.showMenu = function(){
 		console.log('click');
@@ -9,33 +9,39 @@ var ViewModel = function() {
 		$aboutMe = $('.contact-about') || undefined;
 
 		// $prof.css('display', $prof.css("display") === 'none' ? '' : 'none');
-		$list.css('display', $list.css("display") === 'block' ? '' : 'block');
-		$menuCover.css('display', $menuCover.css("display") === 'none' ? '' : 'none');
+		$list.toggle('fast');
+		$menuCover.toggle('fast');
+		// $list.css('display', $list.css("display") === 'block' ? '' : 'block');
+		// $menuCover.css('display', $menuCover.css("display") === 'none' ? '' : 'none');
 	};
 
 	this.showCredit = function(){
 		$credit = $('.credit');
 		console.log("click");
 
-		$credit.css('display', $credit.css("display") === 'block' ? '' : 'block');
+		$credit.toggle('fast');
+		// $credit.css('display', $credit.css("display") === 'block' ? '' : 'block');
 	}
 
-	// this.titleSwitch = function(el){
-	// 	switch(el){
-	// 		case 'linkedin': 
-	// 			title("Let's connect");
-	// 			break;
-	// 		case 'email': 
-	// 			title('Email me');
-	// 			break;
-	// 		case 'git':
-	// 			title("Fork me");
-	// 			break;
-	// 		case 'none':
-	// 			title("");
-	// 			break;
-	// 	}
-	// };
+	this.titleHide = ko.observable(true);
+	this.formHide = ko.observable(false);
+
+	this.showForm = function(){
+		window.requestAnimationFrame(that.showFormCallback)
+	}
+
+	this.showFormCallback = function(){
+		$form = $('.contact-form');
+		$title = $('.contact-about');
+
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+ 			$title.toggle();
+ 			$form.toggle();
+		} else {
+			$title.toggle('fast');
+			$form.toggle('fast');
+		}
+	}
 
 	// This is for the web worker mailWorker.js
 	// TODO create form field checks
