@@ -33,10 +33,15 @@ var ViewModel = function() {
 	this.showFormCallback = function(){
 		$form = $('.contact-form');
 		$title = $('.contact-about');
+		$exit = $('.exit-icon');
+		$links = $('.contact-links');
+		console.log('click')
 
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
  			$title.toggle();
  			$form.toggle();
+ 			$exit.toggle();
+ 			$links.css('display', $links.css("display") === 'block' ? 'none' : 'block');
 		} else {
 			$title.toggle('fast');
 			$form.toggle('fast');

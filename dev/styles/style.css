@@ -84,6 +84,17 @@ header {
     right: 1em; } }
 
 @media only screen and (min-width: 601px) {
+  .exit-icon {
+    display: none; } }
+@media only screen and (max-width: 600px) {
+  .exit-icon {
+    display: none;
+    position: absolute;
+    width: 2em;
+    top: 5.25em;
+    right: 2em; } }
+
+@media only screen and (min-width: 601px) {
   .credit {
     display: none; } }
 @media only screen and (max-width: 600px) {

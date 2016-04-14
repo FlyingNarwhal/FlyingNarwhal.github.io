@@ -127,6 +127,20 @@ header {
   }
 }
 
+.exit-icon {
+  @media #{$information-desktop} {
+    display: none;
+  }
+
+  @media #{$information-phone} {
+    display: none;
+    position: absolute;
+    width: 2em;
+    top: 5.25em;
+    right: 2em;
+  }
+}
+
 .credit {
   @media #{$information-desktop} {
     display: none;
