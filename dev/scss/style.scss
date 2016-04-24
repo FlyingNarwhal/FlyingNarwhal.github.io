@@ -182,9 +182,9 @@ header {
   color: $active-text-color;
 
   @media #{$information-desktop} {
-    font-size: 9em;  
+    font-size: 9em;
   }
-  
+
   @media #{$information-phone} {
     font-size: 5em;
   }
@@ -254,8 +254,8 @@ header {
 }
 
 .contact-form-ul input, .contact-form-ul textarea {
-  // height: px; 
-  width: 12em; 
+  // height: px;
+  width: 12em;
   padding: 2px 8px;
   border-radius: 2px;
   border: 1px solid $active-text-color;
@@ -264,16 +264,16 @@ header {
       -ms-box-sizing: border-box;
           box-sizing: border-box;
 
-  background: #FFFFFF url('bg_form.png') left top repeat-x; 
-  background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
-  background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
-  box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
-  -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
-  -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+  background: #FFFFFF url('bg_form.png') left top repeat-x;
+  background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+  background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+  box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
 
   @media #{$information-phone} {
     padding: 6px 12px;
-  } 
+  }
 }
 
 .contact-form-ul input:focus, .contact-form-ul textarea:focus {
@@ -347,9 +347,9 @@ header {
   transition-duration: 0.3s;
   @media #{$information-desktop} {
     padding: .25em;
-    font-size: 2.25em;  
+    font-size: 2.25em;
   }
-  
+
   @media #{$information-phone} {
     padding: 0 .5em 0 .5em;
     font-size: 3em;
@@ -358,7 +358,7 @@ header {
 
 .contact-section-list span:nth-child(1) {
   padding-left: 0;
-  margin-left: 0; 
+  margin-left: 0;
 }
 
 .contact-section-list span:hover {
@@ -483,7 +483,7 @@ header {
   background-color: #484848;
   @media #{$information-phone}{
   	min-height: 20em;
-    padding-top: 3em; 
+    padding-top: 3em;
   }
 }
 

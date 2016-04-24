@@ -1,1 +1,0 @@
-onmessage=function(s){$.ajax({url:"../scripts/mailer.py",type:"post",contentType:"application/json; charset=utf-8",dataType:"json",data:JSON.stringify({data:s.data}),success:function(s){postMessage("success")}})};

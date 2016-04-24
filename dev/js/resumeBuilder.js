@@ -77,7 +77,7 @@ var education = {
 																	formattedSchoolLocation); //TO add majot, append formattedSchoolMajor, and uncomment above line
 		}
 
-		$edu.append(HTMLonlineClasses);		
+		$edu.append(HTMLonlineClasses);
 		$edu.append(HTMLonlineStart);
 
 		for(var course in education.onlineCourses){
@@ -89,7 +89,7 @@ var education = {
 			var formattedOnlineURL = HTMLonlineURL.replace(data, education.onlineCourses[course].url);
 
 			//append online course HTML
-			$(".online-entry").append(formattedOnlineTitle, 
+			$(".online-entry").append(formattedOnlineTitle,
 															formattedOnlineSchool,
 															formattedOnlineDates,
 															formattedOnlineURL);
@@ -97,6 +97,7 @@ var education = {
 	}
 };
 
+// update description entries
 var work = {
 	"jobs": [{
 		"employer": "Florence Unified School District",
@@ -139,6 +140,7 @@ var work = {
 	}
 };
 
+// update description entries
 var projects = {
 	"projects": [{
 		"title": "Frogger Clone",
@@ -176,7 +178,7 @@ var projects = {
 			var formattedProjectDate = HTMLprojectDates.replace(data, projects.projects[project].dates);
 			var formattedProjectDescription = HTMLprojectDescription.replace(data, projects.projects[project].description);
 			var formattedProjectImage = HTMLprojectImage.replace(data, projects.projects[project].images);
-			
+
 			$(".project-entry").append(formattedProjectLink + formattedProjectTitle);
 			$(".project-entry").append(formattedProjectDate);
 			$(".project-entry").append(formattedProjectDescription);
