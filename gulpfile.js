@@ -2,10 +2,11 @@
 var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin'); // task dist
 var cssmin = require('gulp-cssmin'); // task dist
-var rename = require('gulp-rename'); 
+var rename = require('gulp-rename');
 var uglify = require('gulp-uglify'); // task dist
 var responsive = require('gulp-responsive-images'); //task picture
 var browserSync = require('browser-sync').create(); //task serve
+var sass = require('gulp-sass'); //task sass, sass:watch
 
 // production gulp task
 gulp.task('dist', function(){
@@ -16,8 +17,8 @@ gulp.task('dist', function(){
   // Move index html to production
   gulp.src('dev/*.html')
     .pipe(gulp.dest('dist'));
-  //Move html in views to production 
-  gulp.src('dev/**/*.html')
+  //Move html in views to production
+  gulp.src('dev/views/*.html')
     .pipe(gulp.dest('dist/views'));
   // Minify JS, and move to production
   gulp.src('dev/js/*.js')
@@ -31,7 +32,7 @@ gulp.task('dist', function(){
     .pipe(gulp.dest('dist/cgi-bin'));
 })
 
-// Create responsive images, keep in development
+// Create responsive images, keep dest in development
 gulp.task('picture', function(){
   gulp.src('dev/images/**/*')
     .pipe(responsive({
@@ -52,6 +53,18 @@ gulp.task('picture', function(){
     }))
   .pipe(gulp.dest('dev/images'));
 });
+
+// compile SASS to css
+gulp.task('sass', function(){
+  return gulp.src('dev/scss/style.scss')
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(gulp.dest('dev/styles'))
+});
+
+// start before browsersync
+gulp.task('sass:watch', function(){
+  gulp.watch('dev/scss/style.scss', ['sass']);
+})
 
 // browsersync stuff, yo
 gulp.task('serve', function(){
