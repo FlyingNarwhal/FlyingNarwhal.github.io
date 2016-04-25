@@ -139,7 +139,7 @@ header {
 
 .contact-form {
   display: none;
-  position: fixed;
+  position: absolute;
   width: 24em;
   top: 6em;
   left: 50%;
