@@ -44,15 +44,15 @@ print """
 	<html>
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="refresh" content="5; url=https://joedahle.me/">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Thank you</title>
 	</head>
 	<body>
 		<div class="mailer-header">
 			<h1>Thank you</h1>
 			<p>Just a sec while the server tidys up a bit...</p>
+			<p>If your browser doesn't refresh in a few seconds, click <a href="https://joedahle.me/">here</a></p>
 		</div>
 	</body>
 """
