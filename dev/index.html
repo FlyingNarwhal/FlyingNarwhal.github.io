@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Joe Dahle | Front End Web Developer</title>
-	
+
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
@@ -20,7 +20,7 @@
 				<li id="home" class="header-navbar-element active"><a class="link" href="https://joedahle.me/index.html">Home</a></li>
 				<li id="portfolio" class="header-navbar-element"><a class="link" href="/views/resume.html">Portfolio</a></li>
 				<li id="blog" class="header-navbar-element"><a class="link" href="https://joedahle.me/blog">Blog</a></li>
-			</ul> 
+			</ul>
 		</header>
 
 		<div class="credit">
@@ -37,11 +37,11 @@
 
 		<section class="contact-section">
 
-			<img class="bk-img" src="images/background-500.jpg" srcset="images/background-1000.jpg 1000w, images/background-2000.jpg 2x" alt="office picture, yo">	
+			<img class="bk-img" src="images/background-500.jpg" srcset="images/background-1000.jpg 1000w, images/background-2000.jpg 2x" alt="office picture, yo">
 
 			<div class="contact-about">
 				<h1 class="contact-about-title">Web Developer</h1>
-			</div>	
+			</div>
 
 			<div class="contact-form">
 				<form action="cgi-bin/mailer.py" method="post">
@@ -51,17 +51,17 @@
 						</li>
 						<li>
 							<label for="name">Name</label>
-							<input type="text" id="name" name="SenderName" autocomplete="name" placeholder="Cosmo Kramer" require></input>
+							<input type="text" id="name" name="SenderName" autocomplete="name" placeholder="Cosmo Kramer" require>
 						</li>
 						<li>
 							<label for="email">Email</label>
-							<input type="email" id="email" name="SenderEmail" autocomplete="email" data-bind="textInput: emailQuery" placeholder="kman@kramerica.com" data-bind="textInput: emailQuery" require></input>
+							<input type="email" id="email" name="SenderEmail" autocomplete="email" data-bind="textInput: emailQuery" placeholder="kman@kramerica.com" require>
 						</li>
 						<li>
 							<label for="body">Message</label>
 							<br>
 							<br>
-							<textarea id="body" name=Body placeholder="What's up?"></textarea>
+							<textarea id="body" name="Body" placeholder="What's up?"></textarea>
 						</li>
 						<li>
 							<button class="formSubmit" type="submit" value="Submit" data-bind="enable: validEmail">Submit</button>
