@@ -1,35 +1,40 @@
 var ViewModel = function() {
 	var that = this;
-	title = ko.observable("");
+
+	/**
+	 * Toggle view of navigation menu across, index.html and resume.html
+	 * @return {boolean} toggle visibility
+	 */
 	this.showMenu = function(){
-		console.log('click');
-		// $prof = $('.profile');
 		$list = $('.header-navbar-list');
 		$menuCover = $('.menuCover') || undefined;
 		$aboutMe = $('.contact-about') || undefined;
 
-		// $prof.css('display', $prof.css("display") === 'none' ? '' : 'none');
 		$list.toggle('fast');
 		$menuCover.toggle('fast');
-		// $list.css('display', $list.css("display") === 'block' ? '' : 'block');
-		// $menuCover.css('display', $menuCover.css("display") === 'none' ? '' : 'none');
 	};
 
+	/**
+ 	* Toggle the view for asset artist credit
+ 	* @return {boolean} return the view as visible, or not
+ 	*/
 	this.showCredit = function(){
 		$credit = $('.credit');
 		console.log("click");
 
 		$credit.toggle('fast');
-		// $credit.css('display', $credit.css("display") === 'block' ? '' : 'block');
 	};
-
-	this.titleHide = ko.observable(true);
-	this.formHide = ko.observable(false);
 
 	this.showForm = function(){
 		window.requestAnimationFrame(that.showFormCallback);
 	};
 
+	/**
+	 * Handle the contact form view, for mobile, and desktop devices.
+	 * 		Called by showForm
+	 * @return {boolean} toggle the view of contact-links when
+	 *    contact-form is shown
+	 */
 	this.showFormCallback = function(){
 		$form = $('.contact-form');
 		$title = $('.contact-about');
@@ -37,7 +42,7 @@ var ViewModel = function() {
 		$links = $('.contact-links');
 		console.log('click');
 
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
  			$title.toggle();
  			$form.toggle();
  			$exit.toggle();
@@ -48,11 +53,7 @@ var ViewModel = function() {
 		}
 	};
 
-	// This is for the web worker mailWorker.js
-	// TODO create form field checks
-
-	// to be used with senderEmail in formValue
-	// Check validity of users input as email address
+	// TODO give feedback for invalid input
 	this.emailQuery = ko.observable('');
 	this.validEmail = ko.computed(function(){
 		var filter = ko.observable(that.emailQuery());
