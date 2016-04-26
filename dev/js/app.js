@@ -21,21 +21,21 @@ var ViewModel = function() {
 
 		$credit.toggle('fast');
 		// $credit.css('display', $credit.css("display") === 'block' ? '' : 'block');
-	}
+	};
 
 	this.titleHide = ko.observable(true);
 	this.formHide = ko.observable(false);
 
 	this.showForm = function(){
-		window.requestAnimationFrame(that.showFormCallback)
-	}
+		window.requestAnimationFrame(that.showFormCallback);
+	};
 
 	this.showFormCallback = function(){
 		$form = $('.contact-form');
 		$title = $('.contact-about');
 		$exit = $('.exit-icon');
 		$links = $('.contact-links');
-		console.log('click')
+		console.log('click');
 
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
  			$title.toggle();
@@ -46,7 +46,7 @@ var ViewModel = function() {
 			$title.toggle('fast');
 			$form.toggle('fast');
 		}
-	}
+	};
 
 	// This is for the web worker mailWorker.js
 	// TODO create form field checks
@@ -55,7 +55,7 @@ var ViewModel = function() {
 	// Check validity of users input as email address
 	this.emailQuery = ko.observable('');
 	this.validEmail = ko.computed(function(){
-		var filter = ko.observable(that.emailQuery())
+		var filter = ko.observable(that.emailQuery());
 		if(filter()){
 			// Check that the email provided is a of type "johndoe@example.com"
 			var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
