@@ -2,9 +2,9 @@ var ViewModel = function() {
 	var that = this;
 
 	/**
-	 * Toggle view of navigation menu across, index.html and resume.html
-	 * @return {boolean} toggle visibility
-	 */
+	* Toggle view of navigation menu across, index.html and resume.html
+	* @return {boolean} toggle visibility
+	*/
 	this.showMenu = function(){
 		$list = $('.header-navbar-list');
 		$menuCover = $('.menuCover') || undefined;
@@ -15,9 +15,9 @@ var ViewModel = function() {
 	};
 
 	/**
- 	* Toggle the view for asset artist credit
- 	* @return {boolean} return the view as visible, or not
- 	*/
+	* Toggle the view for asset artist credit
+	* @return {boolean} return the view as visible, or not
+	*/
 	this.showCredit = function(){
 		$credit = $('.credit');
 		console.log("click");
@@ -43,11 +43,12 @@ var ViewModel = function() {
 		console.log('click');
 
 		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
- 			$title.toggle();
- 			$form.toggle();
- 			$exit.toggle();
- 			$links.css('display', $links.css("display") === 'block' ? 'none' : 'block');
-		} else {
+			$title.toggle();
+			$form.toggle();
+			$exit.toggle();
+			$links.css('display', $links.css("display") === 'block' ? 'none' : 'block');
+		} else
+		{
 			$title.toggle('fast');
 			$form.toggle('fast');
 		}
