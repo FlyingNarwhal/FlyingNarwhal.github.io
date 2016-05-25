@@ -21,9 +21,9 @@ gulp.task('dist', function(){
   gulp.src('dev/views/*.html')
     .pipe(gulp.dest('dist/views'));
   // Minify JS, and move to production
-  gulp.src('dev/js/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
+  // gulp.src('dev/js/*.js')
+  //   .pipe(uglify())
+  //   .pipe(gulp.dest('dist/js'));
   // move images to production, make sure, gulp picture has been run first
   gulp.src('dev/images/*.{jpg, png}')
     .pipe(gulp.dest('dist/images'));

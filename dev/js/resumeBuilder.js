@@ -12,7 +12,7 @@ var bio = {
 	},
 	"welcomeMessage": "",
 	"skills": ["HTML/ CSS", "JavaScript", "Sass", "Git", "Linux"],
-	"bioPic": "../images/profile.jpg",
+	"bioPic": "../assets/profile.jpg",
 	"display": function() {
 		// variables for header
 		var $header = $("#header");
@@ -100,6 +100,10 @@ var education = {
 // update description entries
 var work = {
 	"jobs": [{
+		"employer: Florence Unified School District",
+		"title": ""
+	}
+	{
 		"employer": "Florence Unified School District",
 		"title": " Bus Driver",
 		"location": "San Tan Valley, Arizona",
@@ -147,28 +151,28 @@ var projects = {
 		"link": "https://FlyingNarwhal.github.io/FEND-Arcade-Clone",
 		"dates": "November 2015",
 		"description": "A recreation of frogger. Project 3, in the Udacity Nanodegree program.",
-		"images": ["../images/arcadeClone.jpg"]
+		"images": ["../assets/arcadeClone.jpg"]
 	},
 	{
 		"title": "Neighborhood Map Project",
 		"link": "https://FlyingNarwhal.github.io/FEND-Neighborhood-Map-Project",
 		"dates": "December 2015",
 		"description": "Want to find some decent restaurants around the east valley? Here's the place to look.",
-		"images": ["../images/neighborhoodMapProject.png"]
+		"images": ["../assets/neighborhoodMapProject.png"]
 	},
 	{
 		"title": "Feed Reader Testing with Jasmine",
 		"link":  "https://flyingnarwhal.github.io/FEND-Feed-Reader-Testing",
 		"dates": "January 2016",
 		"description": "Create unit tests with Jamsmine for a simple feed reader built by the Udacity Team.",
-		"images": ["../images/jasmine.png"]
+		"images": ["../assets/jasmine.png"]
 	},
 	{
 		"title": "Website optimization",
 		"link": "https://flyingnarwhal.github.io/FEND-Optimization",
 		"dates": "November 2015",
 		"description": "Optimize a webpage to reach above 90 in a Google PageSpeed, optimize framerates to hit those 60FPS and remove the pesky jank",
-		"images": ["../images/optimization.png"]
+		"images": ["../assets/optimization.png"]
 	}],
 	"display": function() {
 		$("#projects").append(HTMLprojectStart);

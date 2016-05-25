@@ -1,88 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Joe Dahle | Front End Web Developer</title>
-	
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <title>Experimental | Joe Dahle</title>
+
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <script src="https://use.fontawesome.com/f40fde9434.js"></script>
 </head>
-<body id="contact-body">
-	<div class="contact-container">
-		<img src="images/menu-icon.png" class="menu-icon" id="menu-icon" data-bind="click: showMenu">
-		<img src="images/credit.png" class="credit-icon" id="credit-icon" data-bind="click: showCredit">
+<body>
+  <div class="menu">
+    <span class="js-menu menu__toggle material-icons md-light">menu</span>
+  </div>
 
-		<header class="header">
-			<ul class="header-navbar-list showMenu">
-				<li id="home" class="header-navbar-element active"><a class="link" href="https://joedahle.me/index.html">Home</a></li>
-				<li id="portfolio" class="header-navbar-element"><a class="link" href="/views/resume.html">Portfolio</a></li>
-				<li id="blog" class="header-navbar-element"><a class="link" href="https://joedahle.me/blog">Blog</a></li>
-			</ul> 
-		</header>
+  <nav class="js-navigator navigator navigator--collapse">
+    <ul class="navigator__container">
+      <li class="navigator__item">
+        <a href="https://joedahle.me/" class="navigator__link">Home</a>
+      </li>
+      <li class="navigator__item">
+        <a href="https://joedahle.me/blog/" class="navigator__link">Blog</a>
+      </li>
+      <li class="navigator__item">
+        <a href="https://joedahle.me/views/resume.html" class="navigator__link">Portfolio</a>
+      </li>
+      <li class="navigator__item">
+        <a href="#" class="navigator__link">Labs</a>
+      </li>
+    </ul>
+  </nav>
 
-		<div class="credit">
-			<span class="ack-center">Thanks to</span>
-			<hr>
-			<span class="ack-center">The Noun Project</span>
-			<br><br>
-			<span class="acknowlegments">Menu icon by Yaroslav Samoilov</span>
-			<br><br>
-			<span class="acknowlegments">Heart icon by Sergey Demushkin</span>
-			<br><br>
-			<span class="acknowlegments">Exit icon by Vicons Design</span>
-		</div>
-
-		<section class="contact-section">
-
-			<img class="bk-img" src="images/background-500.jpg" srcset="images/background-1000.jpg 1000w, images/background-2000.jpg 2x" alt="office picture, yo">	
-
-			<div class="contact-about">
-				<h1 class="contact-about-title">Web Developer</h1>
-			</div>	
-
-			<div class="contact-form">
-				<form action="cgi-bin/mailer.py" method="post">
-					<ul class="contact-form-ul">
-						<li>
-							<h1>Contact me</h1>
-						</li>
-						<li>
-							<label for="name">Name</label>
-							<input type="text" id="name" name="SenderName" autocomplete="name" placeholder="Cosmo Kramer" require></input>
-						</li>
-						<li>
-							<label for="email">Email</label>
-							<input type="email" id="email" name="SenderEmail" autocomplete="email" data-bind="textInput: emailQuery" placeholder="kman@kramerica.com" data-bind="textInput: emailQuery" require></input>
-						</li>
-						<li>
-							<label for="body">Message</label>
-							<br>
-							<br>
-							<textarea id="body" name=Body placeholder="What's up?"></textarea>
-						</li>
-						<li>
-							<button class="formSubmit" type="submit" value="Submit" data-bind="enable: validEmail">Submit</button>
-						</li>
-					</ul>
-				</form>
-			</div>
-			<img src="images/exit.png" class="exit-icon" data-bind="click: $root.showFormCallback">
-
-			<div class="contact-links">
-				<ul class="contact-section-list">
-					<li class="account-link" data-bind="click: showForm"><a title="email"><span class="fa fa-envelope fa-lg"></span></a></li>
-					<li class="account-link"><a href="https://www.linkedin.com/in/joedahle" title="linkedin"><span class="fa fa-linkedin-square fa-lg"></span></a></li>
-					<li class="account-link"><a href="https://github.com/JoeDahle" title="github"><span class="fa fa-github-square fa-lg"></span></a></li>
-				</ul>
-			</div>
-		</section>
-	</div>
+  <section class="js-intrigue intrigue__container">
+    <img class="intrigue__background"
+    src="./assets/background-500.jpg"
+    srcset="./assets/background-1000.jpg 1x, ./assets/background-2000.jpg 2x"
+    alt="Image of a developers desk">
+    <h1 class="js-title intrigue__title">Web Developer</h1>
+    <form class="js-form intrigue__form intrigue__form--flipped" action="cgi-bin/mailer.py">
+      <ul class="form__container">
+        <li class="form__element">
+          <h1 class="form__title">Contact Me</h1>
+        </li>
+        <li class="form__element">
+          <label for="form__name">Name*</label>
+          <input type="name"
+            id="form__name"
+            name="SenderName"
+            autocomplete="name"
+            placeholder="Cosmo Kramer"
+            required>
+        </li>
+        <li class="form__element">
+          <label class="form__email" for="form__email">Email*</label>
+          <input type="email"
+          id="form__email"
+          name="SenderEmail"
+          autocomplete="email"
+          placeholder="kman@kramerica.com"
+          onblur="validate()"
+          required>
+          <span class="form__email-element form__email-element--invalid">Please use a valid email.</span>
+        </li>
+        <li class="form__element">
+          <label class="form__body" for="form__body">Message</label>
+          <br><br>
+          <textarea name="Body" id="form__body" placeholder="What's up?"></textarea>
+        </li>
+        <li class="form__element">
+          <button class="form__submit"
+            type="submit"
+            value="Submit">Submit</button>
+        </li>
+      </ul>
+    </form>
+  </section>
+  <footer class="contact__container">
+    <ul class="contact__list">
+      <li class="contact__element">
+        <a href="#" class=" js-form-toggle contact__icon fa fa-envelope fa-lg"></a>
+      </li>
+      <li class="contact__element">
+        <a href="https://linkedin.com/in/JoeDahle" class="contact__icon fa fa-linkedin-square fa-lg"></a>
+      </li>
+      <li class="contact__element">
+        <a href="https://github.com/JoeDahle" class="contact__icon fa fa-github-square fa-lg"></a>
+      </li>
+    </ul>
+  </footer>
 </body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script src="js/jQuery.js"></script>
-	<script src="js/knockout.js"></script>
-	<script src="js/app.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/flip.js"></script>
 </html>

@@ -1,0 +1,421 @@
+// intrigue partial
+
+// color palatte
+$form__background-color: #e1e1e1;
+$intrigue__form-text-color: rgba(0, 0, 0, 0.54);
+$intrigue__title--color: #e1e1e1;
+$invalid-email__background: #D6273B;
+
+.intrigue__container {
+  width: 100%;
+  height: 100%;
+}
+
+.intrigue__background {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.intrigue__title {
+  color: $intrigue__title--color;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-size: 9em;
+  top: 0.5em;
+  animation-name: frontFlipReturn;
+  animation-duration: 0.5s;
+}
+
+
+.intrigue__title--flipped {
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+       -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  animation-name: frontFlip;
+  animation-duration: 0.5s;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+       -o-backface-visibility: hidden;
+}
+
+.intrigue__form {
+  color: $intrigue__form-text-color;
+  position: absolute;
+  width: 24em;
+  top: 6em;
+  left: 50%;
+  margin-left: -12em;
+  animation-name: backFlipReturn;
+  animation-duration: 0.5s;
+}
+
+.intrigue__form--flipped {
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+       -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  animation-name: backFlip;
+  animation-duration: 0.5s;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+       -o-backface-visibility: hidden;
+}
+
+// prefix Keyframes for frontFlip animation
+@-webkit-keyframes frontFlip {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    visibility: visible;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+    visibility: hidden;
+  }
+}
+
+@-moz-keyframes frontFlip {
+  0% {
+    -moz-transform: scaleX(1);
+         transform: scaleX(1);
+    visibility: visible;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -moz-transform: scaleX(-1);
+         transform: scaleX(-1);
+    visibility: hidden;
+  }
+}
+
+@-o-keyframes frontFlip {
+  0% {
+    -o-transform: scaleX(1);
+       transform: scaleX(1);
+    visibility: visible;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -o-transform: scaleX(-1);
+       transform: scaleX(-1);
+    visibility: hidden;
+  }
+}
+
+@keyframes frontFlip {
+  0% {
+    transform: scaleX(1);
+    visibility: visible;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    transform: scaleX(-1);
+    visibility: hidden;
+  }
+}
+
+// prefix Keyframes for frontFlipReturn animation
+@-webkit-keyframes frontFlipReturn {
+  0% {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+    visibility: hidden;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    visibility: visible;
+  }
+}
+
+@-moz-keyframes frontFlipReturn {
+  0% {
+    -moz-transform: scaleX(-1);
+         transform: scaleX(-1);
+    visibility: hidden;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -moz-transform: scaleX(1);
+         transform: scaleX(1);
+    visibility: visible;
+  }
+}
+
+@-o-keyframes frontFlipReturn {
+  0% {
+    -o-transform: scaleX(-1);
+       transform: scaleX(-1);
+    visibility: hidden;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -o-transform: scaleX(1);
+       transform: scaleX(1);
+    visibility: visible;
+  }
+}
+
+@keyframes frontFlipReturn {
+  0% {
+    transform: scaleX(-1);
+    visibility: hidden;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    transform: scaleX(1);
+    visibility: visible;
+  }
+}
+
+// prefix Keyframes for backFlip animation
+@-webkit-keyframes backFlip {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    visibility: visible;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+    visibility: hidden;
+  }
+}
+
+@-moz-keyframes backFlip {
+  0% {
+    -moz-transform: scaleX(1);
+         transform: scaleX(1);
+    visibility: visible;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -moz-transform: scaleX(-1);
+         transform: scaleX(-1);
+    visibility: hidden;
+  }
+}
+
+@-o-keyframes backFlip {
+  0% {
+    -o-transform: scaleX(1);
+       transform: scaleX(1);
+    visibility: visible;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -o-transform: scaleX(-1);
+       transform: scaleX(-1);
+    visibility: hidden;
+  }
+}
+
+@keyframes backFlip {
+  0% {
+    transform: scaleX(1);
+    visibility: visible;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    transform: scaleX(-1);
+    visibility: hidden;
+  }
+}
+
+// prefix Keyframes for backFlipReturn animation
+@-webkit-keyframes backFlipReturn {
+  0% {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+    visibility: hidden;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    visibility: visible;
+  }
+}
+
+@-moz-keyframes backFlipReturn {
+  0% {
+    -moz-transform: scaleX(-1);
+         transform: scaleX(-1);
+    visibility: hidden;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -moz-transform: scaleX(1);
+         transform: scaleX(1);
+    visibility: visible;
+  }
+}
+
+@-o-keyframes backFlipReturn {
+  0% {
+    -o-transform: scaleX(-1);
+       transform: scaleX(-1);
+    visibility: hidden;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -o-transform: scaleX(1);
+       transform: scaleX(1);
+    visibility: visible;
+  }
+}
+
+@keyframes backFlipReturn {
+  0% {
+    transform: scaleX(-1);
+    visibility: hidden;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    transform: scaleX(1);
+    visibility: visible;
+  }
+}
+
+.form__container {
+  width: 25em;
+  height: 30em;
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0;
+  padding: 0;
+  background-color: $form__background-color;
+  border-radius: 2px;
+}
+
+.form__title {
+  text-align: center;
+  font-size: 3.5em;
+  padding: 0;
+  margin: 0;
+}
+
+.form__element {
+  padding: 1em;
+  position: relative;
+  width: 23em;
+}
+
+.form__name {
+  margin: 0;
+  display: inline-block;
+}
+
+.form__container label {
+  width: 2.5em;
+  padding-right: 0.5em;
+
+}
+
+.form__container input, .form__container textarea {
+  width: 12em;
+  padding: 2px 8px;
+  border-radius: 2px;
+  border: 1px solid #fff;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+
+  background: #FFF url('bg_form.png') left top repeat-x;
+  background: -webkit-gradient(linear, left top, left 25, from(#FFF), color-stop(4%, #EEE), to(#FFF));
+  background: -moz-linear-gradient(top, #FFF, #EEE 1px, #FFF 25px);
+
+  -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+     -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+          box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+}
+
+.form__container input:focus, .form__container textarea:focus {
+  background: #FFF;
+  border: 1px solid #39504E;
+}
+
+.form__email-element {
+  display: none;
+}
+
+.form__email-element--invalid {
+  color: #FFF;
+  background-color: $invalid-email__background;
+  display: inline;
+  padding: 2px;
+  border-radius: 2px;
+  margin-left: 0.25em;
+}
+
+#form__email:valid {
+  border-left: 3px solid green;
+}
+
+.form__element > textarea {
+  height: 10em;
+  width: inherit;
+}
+
+.form__submit {
+  float: right;
+  width: auto;
+  background-color: $intrigue__form-text-color;
+  border: 0;
+  padding: 9px 15px;
+  cursor: pointer;
+  cursor: hand;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+       -o-border-radius: 5px;
+          border-radius: 5px;
+}

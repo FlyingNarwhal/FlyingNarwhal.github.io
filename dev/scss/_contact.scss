@@ -1,0 +1,27 @@
+// Contact link partial
+
+// Color Palatte
+
+.contact__container {
+  position: fixed;
+  top: 85%;
+  right: 10%;
+}
+
+.contact__list li{
+  display: inline-block;
+}
+
+.contact__icon {
+  color: #e1e1e1;
+  padding: 10px;
+}
+
+.contact__icon:hover {
+  color: #FFF;
+}
+
+.contact__list a {
+  font-size: 2.25em;
+  text-decoration: none;
+}
